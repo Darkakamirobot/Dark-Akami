@@ -11,7 +11,7 @@ def get_readable_time(seconds: int) -> str:
     count = 0
     ping_time = ""
     time_list = []
-    time_suffix_list = ["s", "ᴍ", "ʜ", "ᴅᴀʏs"]
+    time_suffix_list = ["s", "ᴍ", "ʜ", "ᴅíᴀs"]
 
     while count < 4:
         count += 1
@@ -46,9 +46,9 @@ def ping(update: Update, context: CallbackContext):
     uptime = get_readable_time((time.time() - StartTime))
 
     message.edit_text(
-        "ɪ ᴀᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ! 🖤\n"
-        "<b>ᴛɪᴍᴇ ᴛᴀᴋᴇɴ:</b> <code>{}</code>\n"
-        "<b>ᴜᴘᴛɪᴍᴇ:</b> <code>{}</code>".format(telegram_ping, uptime),
+        "ᴇsᴛᴏʏ ᴠɪᴠᴀ ʙᴇʙé! 💙\n"
+        "<b>Tɪᴇᴍᴘᴏ ᴛᴏᴍᴀᴅᴏ:</b> <code>{}</code>\n"
+        "<b>ᴛɪᴇᴍᴘᴏ ᴅᴇ ᴀᴄᴛɪᴠɪᴅᴀᴅ:</b> <code>{}</code>".format(telegram_ping, uptime),
         parse_mode=ParseMode.HTML,
     )
 
