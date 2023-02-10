@@ -78,7 +78,7 @@ __New couple of the day can be chosen at 12AM {tomorrow}__"""
 __help__ = """
 Elige amorios en tu chat
 
- ❍ /couple *:* Elige 2 tortolitos y envía su nombre como pareja en tu chat.
+ ❍ /couple *:* Elige 2 tortolitos y enviará su nombre como pareja en tu chat.
 """
 
 __mod_name__ = "Cᴏᴜᴘʟᴇ"
