@@ -370,7 +370,7 @@ def get_chat(chat_id, chat_data):
 __mod_name__ = "Bᴀᴄᴋᴜᴘ"
 
 __help__ = """
-*Only for group owner:*
+*Solo para el propietario del grupo:*
 
  ❍ /import: Responda al archivo de copia de seguridad para que el grupo Butler / Emilia importe tanto como sea posible, lo que facilita mucho las transferencias! \
  Tenga en cuenta que los archivos / fotos no se pueden importar debido a las restricciones de Telegram.
