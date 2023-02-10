@@ -57,33 +57,32 @@ if ENV:
     try:
         OWNER_ID = int(os.environ.get("OWNER_ID", None))
     except ValueError:
-        raise Exception("Your OWNER_ID env variable is not a valid integer.")
+        raise Exception("Su variable de entorno OWNER_ID no es un número entero válido.")
 
     try:
         BL_CHATS = set(int(x) for x in os.environ.get("BL_CHATS", "").split())
     except ValueError:
-        raise Exception("Your blacklisted chats list does not contain valid integers.")
+        raise Exception("Su lista de chats en la lista negra no contiene números enteros válidos.")
 
     try:
         DRAGONS = set(int(x) for x in os.environ.get("DRAGONS", "").split())
         DEV_USERS = set(int(x) for x in os.environ.get("DEV_USERS", "").split())
     except ValueError:
-        raise Exception("Your sudo or dev users list does not contain valid integers.")
+        raise Exception("Su lista de usuarios de sudo o dev no contiene números enteros válidos.")
 
     try:
         DEMONS = set(int(x) for x in os.environ.get("DEMONS", "").split())
     except ValueError:
-        raise Exception("Your support users list does not contain valid integers.")
+        raise Exception("Su lista de usuarios de soporte no contiene números enteros válidos.")
 
     try:
         TIGERS = set(int(x) for x in os.environ.get("TIGERS", "").split())
     except ValueError:
-        raise Exception("Your tiger users list does not contain valid integers.")
-
+        raise Exception("Su lista de usuarios de tigres no contiene números enteros válidos")
     try:
         WOLVES = set(int(x) for x in os.environ.get("WOLVES", "").split())
     except ValueError:
-        raise Exception("Your whitelisted users list does not contain valid integers.")
+        raise Exception("Su lista de usuarios incluidos en la lista blanca no contiene números enteros válidos.")
 
 else:
     from FallenRobot.config import Development as Config
