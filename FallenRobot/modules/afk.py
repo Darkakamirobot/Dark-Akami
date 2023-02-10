@@ -141,10 +141,10 @@ def check_afk(update, context, user_id, fst_name, userc_id):
 
 
 __help__ = """
-*Away from group*
- ❍ /afk <reason>*:* mark yourself as AFK(away from keyboard).
- ❍ brb <reason>*:* same as the afk command - but not a command.
-When marked as AFK, any mentions will be replied to with a message to say you're not available!
+*Lejos del grupo*
+ ❍ /afk <razón>*:* Márquese como AFK (lejos del teclado).
+ ❍ brb <reason>*:* Lo mismo que el comando afk - pero no un comando.
+Cuando se marque como AFK, cualquier mención será respondida con un mensaje para decir que no está disponible!
 """
 
 AFK_HANDLER = DisableAbleCommandHandler("afk", afk)
