@@ -453,16 +453,16 @@ __mod_name__ = "Bʟᴀᴄᴋʟɪsᴛ"
 
 __help__ = """
 
-Blacklists are used to stop certain triggers from being said in a group. Any time the trigger is mentioned, the message will immediately be deleted. A good combo is sometimes to pair this up with warn filters!
+Blacklists se utilizan para evitar que ciertos disparadores se digan en un grupo. Cada vez que se mencione el desencadenante, el mensaje se eliminará inmediatamente. ¡A veces, una buena combinación es emparejar esto con filtros de advertencia!
 
-*NOTE*: Blacklists do not affect group admins.
+*NOTE*: Blacklists no afectan a los administradores de grupos.
 
- ❍ /blacklist*:* View the current blacklisted words.
+ ❍ /blacklist*:* Ver las palabras actuales en la blacklist.
 
 Admin only:
- ❍ /addblacklist <triggers>*:* Add a trigger to the blacklist. Each line is considered one trigger, so using different lines will allow you to add multiple triggers.
- ❍ /unblacklist <triggers>*:* Remove triggers from the blacklist. Same newline logic applies here, so you can remove multiple triggers at once.
- ❍ /blacklistmode <off/del/warn/ban/kick/mute/tban/tmute>*:* Action to perform when someone sends blacklisted words.
+ ❍ /addblacklist <triggers>*:* Agregue un disparador a la blacklist. Cada línea se considera un disparador, por lo que usar diferentes líneas le permitirá agregar múltiples disparadores.
+ ❍ /unblacklist <triggers>*:* Elimina los disparadores de la blacklist. Aquí se aplica la misma lógica de nueva línea, por lo que puede eliminar varios activadores a la vez.
+ ❍ /blacklistmode <off/del/warn/ban/kick/mute/tban/tmute>*:* Acción a realizar cuando alguien envía palabras fe la blacklist.
 """
 
 BLACKLIST_HANDLER = DisableAbleCommandHandler(
