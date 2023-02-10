@@ -64,7 +64,7 @@ def no_longer_afk(update: Update, context: CallbackContext):
                 "{} is back!",
                 "{} is now in the chat!",
                 "{} is awake!",
-                "{} is back online!",
+                "{} mi esclavo está en linea de nuevo ¿Dondé te has metido? 😡!",
                 "{} Volvió de comprar los cigarrillos, a diferencia de tú papá que se fue y ya no volvió! 😊 ",
                 "Welcome back! {}",
                 "Where is {}?\nIn the chat!",
