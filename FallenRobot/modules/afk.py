@@ -60,12 +60,12 @@ def no_longer_afk(update: Update, context: CallbackContext):
         firstname = update.effective_user.first_name
         try:
             options = [
-                "{} Aqui estás de vuelta echando ganas a una vida que ni querías 😒!",
-                "{} Has llegado!? Físicamente mal, mentalmente peor y ni hablar de tu estado económico 😭!",
-                "{} is now in the chat!",
+                "{} aqui estás de vuelta echando ganas a una vida que ni querías 😒!",
+                "{} has llegado!? Físicamente mal, mentalmente peor y ni hablar de tu estado económico 😭!",
+                "{} estás de vuelta! Lo que hicimos anoche! uff 🔥!",
                 "{} is awake!",
                 "{} mi esclavo está en linea de nuevo ¿Dondé te has metido? 😡!",
-                "{} Volvió de comprar los cigarrillos, a diferencia de tú papá que se fue y ya no volvió! 😊 ",
+                "{} volvió de comprar los cigarrillos, a diferencia de tú papá que se fue y ya no volvió! 😊 ",
                 "Welcome back! {}",
                 "Where is {}?\nIn the chat!",
             ]
