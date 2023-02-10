@@ -970,27 +970,27 @@ def button(update: Update, context: CallbackContext) -> str:
 
 
 __help__ = """
-*User Commands*:
-» /admins*:* list of admins in the chat
-» /pinned*:* to get the current pinned message.
+*Comandos de usuarios*:
+» /admins*:* Lista de administradores en el chat.
+» /pinned*:* Para obtener el mensaje anclado actual.
 
-*The Following Commands are Admins only:* 
-» /pin*:* silently pins the message replied to - add `'loud'` or `'notify'` to give notifs to users
-» /unpin*:* unpins the currently pinned message
-» /invitelink*:* gets invitelink
-» /promote*:* promotes the user replied to
-» /lowpromote*:* promotes the user replied to with half rights
-» /fullpromote*:* promotes the user replied to with full rights
-» /demote*:* demotes the user replied to
-» /title <title here>*:* sets a custom title for an admin that the bot promoted
-» /admincache*:* force refresh the admins list
-» /del*:* deletes the message you replied to
-» /purge*:* deletes all messages between this and the replied to message.
-» /purge <integer X>*:* deletes the replied message, and X messages following it if replied to a message.
-» /setgtitle <text>*:* set group title
-» /setgpic*:* reply to an image to set as group photo
-» /setdesc*:* Set group description
-» /setsticker*:* Set group sticker
+*Los siguientes comandos son sólo para administradores:* 
+» /pin*:* Fija silenciosamente el mensaje respondido - agregar `'loud'` o `'notify'` para notificar a los usuarios.
+» /unpin*:* Desancla el mensaje anclado actualmente.
+» /invitelink*:* Recibe enlace de invitación.
+» /promote*:* Promueve al usuario respondido.
+» /lowpromote*:* Promueve al usuario respondido con medio derecho.
+» /fullpromote*:* Promueve al usuario respondido con todos los derechos.
+» /demote*:* Degrada al usuario respondido.
+» /title <titulo aqui>*:* Establece un título personalizado para un administrador que el bot promovió.
+» /admincache*:* Fuerza la actualización de la lista de administradores.
+» /del*:* Borra el mensaje que respondiste.
+» /purge*:* Borra todos los mensajes entre este y el mensaje respondido.
+» /purge <entero X>*:* Elimina el mensaje respondido y X mensajes que lo siguen si se respondió a un mensaje.
+» /setgtitle <text>*:* Establece el título del grupo.
+» /setgpic*:* Responde a una imagen para establecer como foto de grupo.
+» /setdesc*:* Establece descripción del grupo.
+» /setsticker*:* Establece etiqueta del grupo.
 """
 
 SET_DESC_HANDLER = CommandHandler("setdesc", set_desc)
