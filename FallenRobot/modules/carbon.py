@@ -23,7 +23,7 @@ async def carbon_func(_, message):
 __mod_name__ = "Cᴀʀʙᴏɴ"
 
 __help__ = """
-Hacer carbon del texto dado y te lo envia.
+Hace carbon del texto dado y te lo envia.
 
 ❍ /carbon *:* Hace carbon si respondes a un texto.
  """
