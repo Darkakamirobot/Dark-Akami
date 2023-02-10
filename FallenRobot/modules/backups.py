@@ -372,10 +372,10 @@ __mod_name__ = "Bᴀᴄᴋᴜᴘ"
 __help__ = """
 *Only for group owner:*
 
- ❍ /import: Reply to the backup file for the butler / emilia group to import as much as possible, making transfers very easy! \
- Note that files / photos cannot be imported due to telegram restrictions.
+ ❍ /import: Responda al archivo de copia de seguridad para que el grupo Butler / Emilia importe tanto como sea posible, lo que facilita mucho las transferencias! \
+ Tenga en cuenta que los archivos / fotos no se pueden importar debido a las restricciones de Telegram.
 
- ❍ /export: Export group data, which will be exported are: rules, notes (documents, images, music, video, audio, voice, text, text buttons) \
+ ❍ /export: Los datos del grupo de exportación, que se exportarán son: reglas, notas (documentos, imágenes, música, video, audio, voz, texto, botones de texto). \
 
 """
 
