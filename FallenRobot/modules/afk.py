@@ -61,7 +61,7 @@ def no_longer_afk(update: Update, context: CallbackContext):
         try:
             options = [
                 "{} aqui estás de vuelta echando ganas a una vida que ni querías 😒!",
-                "{} has llegado!? Físicamente mal, mentalmente peor y ni hablar de tu estado económico 😭!",
+                "{} ha llegado!? Físicamente mal, mentalmente peor y ni hablar de tu estado económico 😭!",
                 "{} estás de vuelta! Lo que hicimos anoche! uff 🔥!",
                 "{} is awake!",
                 "{} mi esclavo está en linea de nuevo ¿Dondé te has metido? 😡!",
