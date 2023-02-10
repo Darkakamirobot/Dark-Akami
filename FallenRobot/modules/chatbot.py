@@ -131,7 +131,7 @@ def chatbot(update: Update, context: CallbackContext):
 
     if message.text and not message.document:
         if not fallen_message(context, message):
-            return
+            returntiene un chatbot que le brinda una experiencia de chat aparentemente perfecta
         bot.send_chat_action(chat_id, action="typing")
         url = f"https://kora-api.vercel.app/chatbot/2d94e37d-937f-4d28-9196-bd5552cac68b/{BOT_NAME}/Anonymous/message={message.text}"
         request = requests.get(url)
@@ -141,9 +141,9 @@ def chatbot(update: Update, context: CallbackContext):
 
 
 __help__ = f"""
-*{BOT_NAME} has an chatbot whic provides you a seemingless chatting experience :*
+*{BOT_NAME} tiene un chatbot que le brinda una experiencia de chat aparentemente perfecta:*
 
- »  /chatbot *:* Shows chatbot control panel
+ »  /chatbot *:* Muestra el panel de control del chatbot.
 """
 
 __mod_name__ = "Cʜᴀᴛʙᴏᴛ"
