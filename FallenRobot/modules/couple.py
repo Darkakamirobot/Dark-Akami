@@ -68,7 +68,7 @@ __New couple of the day can be chosen at 12AM {tomorrow}__"""
             couple_selection_message = f"""Couple of the day :
 
 [{c1_name}](tg://openmessage?user_id={c1_id}) + [{c2_name}](tg://openmessage?user_id={c2_id}) = 😘
-__New couple of the day can be chosen at 12AM {tomorrow}__"""
+__El nuevo amorio del día se podrá elegir a las 12AM {tomorrow}__"""
             await pbot.send_message(message.chat.id, text=couple_selection_message)
     except Exception as e:
         print(e)
