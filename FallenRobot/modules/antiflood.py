@@ -400,22 +400,23 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
-*Antiflood* allows you to take action on users that send more than x messages in a row. Exceeding the set flood \
-will result in restricting that user.
- This will mute users if they send more than 10 messages in a row, bots are ignored.
+*Antiflood* Le permite tomar medidas sobre los usuarios que envían más de x mensajes seguidos. Excediendo la inundación establecida \
+resultará en la restricción de ese usuario.
 
- ❍ /flood*:* Get the current flood control setting
+ Esto silenciará a los usuarios si envían más de 10 mensajes seguidos, los bots se ignoran.
+
+ ❍ /flood*:* Obten la configuración de control de inundación actual.
 • *Admins only:*
- ❍ /setflood <int/'no'/'off'>*:* enables or disables flood control
- *Example:* `/setflood 10`
- ❍ /setfloodmode <ban/kick/mute/tban/tmute> <value>*:* Action to perform when user have exceeded flood limit. ban/kick/mute/tmute/tban
-• *Note:*
- • Value must be filled for tban and tmute!!
- It can be:
- `5m` = 5 minutes
- `6h` = 6 hours
- `3d` = 3 days
- `1w` = 1 week
+ ❍ /setflood <int/'no'/'off'>*:* Activa o desactiva el control de inundaciones.
+ *Ejemplo:* `/setflood 10`
+ ❍ /setfloodmode <ban/kick/mute/tban/tmute> <value>*:* Acción a realizar cuando el usuario ha excedido el límite de inundación. ban/kick/mute/tmute/tban
+• *Nota:*
+ • Se debe completar el valor para tban y tmute!!
+ Puede ser:
+ `5m` = 5 minutos
+ `6h` = 6 horas
+ `3d` = 3 dias
+ `1w` = 1 semana
  """
 
 __mod_name__ = "Aɴᴛɪ-Fʟᴏᴏᴅ"
