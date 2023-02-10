@@ -76,10 +76,10 @@ async def _(event):
 
 
 __help__ = """
- ❍ /define <text>*:* Type the word or expression you want to search\nFor example /define kill
- ❍ /spell*:* while replying to a message, will reply with a grammar corrected version
- ❍ /synonyms <word>*:* Find the synonyms of a word
- ❍ /antonyms <word>*:* Find the antonyms of a word
+ ❍ /define <texto>*:* Escriba la palabra o expresión que desea buscar\nPor ejemplo /define kill
+ ❍ /spell*:* al responder a un mensaje, responderá con una versión con corrección gramatical
+ ❍ /synonyms <word>*:* Encuentra los sinónimos de una palabra.
+ ❍ /antonyms <word>*:* Encuentra los sinónimos de una palabra.
 """
 
 __mod_name__ = "Eɴɢʟɪsʜ"
