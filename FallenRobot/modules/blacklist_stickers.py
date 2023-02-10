@@ -494,16 +494,16 @@ def __stats__():
 
 
 __help__ = """
-Blacklist sticker is used to stop certain stickers. Whenever a sticker is sent, the message will be deleted immediately.
-*NOTE:* Blacklist stickers do not affect the group admin
- ❍ /blsticker*:* See current blacklisted sticker
+Blacklist sticker se usa para detener ciertos stickers. Siempre que se envíe un sticker, el mensaje se eliminará inmediatamente.
+*NOTE:* Blacklist sticker no afectan al administrador del grupo.
+ ❍ /blsticker*:* Ver blacklisted sticker actual.
 *Only admin:*
- ❍ /addblsticker <sticker link>*:* Add the sticker trigger to the black list. Can be added via reply sticker
- ❍ /unblsticker <sticker link>*:* Remove triggers from blacklist. The same newline logic applies here, so you can delete multiple triggers at once
- ❍ /rmblsticker <sticker link>*:* Same as above
- ❍ /blstickermode <ban/tban/mute/tmute>*:* sets up a default action on what to do if users use blacklisted stickers
+ ❍ /addblsticker <sticker link>*:* Agregue el disparador del sticker a la blacklist. Se puede agregar a través del sticker de respuesta
+ ❍ /unblsticker <sticker link>*:* Eliminar disparadores de la blacklist. Aquí se aplica la misma lógica de nueva línea, por lo que puede eliminar varios activadores a la vez.
+ ❍ /rmblsticker <sticker link>*:* Lo mismo que arriba.
+ ❍ /blstickermode <ban/tban/mute/tmute>*:* Configura una acción predeterminada sobre qué hacer si los usuarios usan stickers en la blacklist.
 Note:
- ❍ <sticker link> can be `https://t.me/addstickers/<sticker>` or just `<sticker>` or reply to the sticker message
+ ❍ <sticker link> Puede ser `https://t.me/addstickers/<sticker>` o sólo `<sticker>` o respondiendo al mensaje del sticker.
 """
 
 __mod_name__ = "Bʟ-Sᴛɪᴄᴋ"
