@@ -193,15 +193,15 @@ if is_module_loaded(FILENAME):
         return "No log channel is set for this group!"
 
     __help__ = """
-*Admins only:*
- ❍ /logchannel*:* get log channel info
- ❍ /setlog*:* set the log channel.
- ❍ /unsetlog*:* unset the log channel.
+*Sólo administradores:*
+ ❍ /logchannel*:* Obtén información del canal de registro.
+ ❍ /setlog*:* Establece el canal de registro.
+ ❍ /unsetlog*:* Desarmar el canal de registro.
 
-Setting the log channel is done by:
-❍ adding the bot to the desired channel (as an admin!)
-❍ sending /setlog in the channel
-❍ forwarding the /setlog to the group
+La configuración del canal de registro se realiza mediante:
+❍ Agrega el bot al canal deseado (¡Cómo administrador!).
+❍ Envia /setlog en el canal.
+❍ Reenvia /setlog al grupo.
 """
 
     __mod_name__ = "Lᴏɢs​"
