@@ -109,9 +109,9 @@ async def msg(event):
 
 
 __help__ = """
-I will give information about a country
+Daré información sobre un país.
 
- ❍ /country <country name>*:* Gathering info about given country
+ ❍ /country <country name>*:* Recopilación de información sobre un país dado.
 """
 
 __mod_name__ = "Cᴏᴜɴᴛʀʏ"
