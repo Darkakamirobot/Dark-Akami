@@ -406,8 +406,10 @@ resultará en la restricción de ese usuario.
  Esto silenciará a los usuarios si envían más de 10 mensajes seguidos, los bots se ignoran.
 
  ❍ /flood*:* Obten la configuración de control de inundación actual.
-• *Admins only:*
- ❍ /setflood <int/'no'/'off'>*:* Activa o desactiva el control de inundaciones.
+ 
+• *Sólo administradores:*
+
+ ❍ /setflood <int/'no'/'off'>*:* Activa o desactiva el control de inundaciones. int = cantidad de mensajes.
  *Ejemplo:* `/setflood 10`
  ❍ /setfloodmode <ban/kick/mute/tban/tmute> <value>*:* Acción a realizar cuando el usuario ha excedido el límite de inundación. ban/kick/mute/tmute/tban
 • *Nota:*
