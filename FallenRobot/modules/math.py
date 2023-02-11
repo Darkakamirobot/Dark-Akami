@@ -115,7 +115,7 @@ def log(update: Update, context: CallbackContext):
 
 __help__ = """
 *MATHS*
-Solves complex math problems using https://newton.now.sh
+Resuelve problemas matemáticos complejos usando https://newton.now.sh
 ❍ /math*:* Math `/math 2^2+2(2)`
 ❍ /factor*:* Factor `/factor x^2 + 2x`
 ❍ /derive*:* Derive `/derive x^2+2x`
@@ -132,9 +132,9 @@ Solves complex math problems using https://newton.now.sh
 ❍ /abs*:* Absolute Value `/abs -1`
 ❍ /log*:* Logarithm `/log 2l8`
 
-_Keep in mind_: To find the tangent line of a function at a certain x value, send the request as c|f(x) where c is the given x value and f(x) is the function expression, the separator is a vertical bar '|'. See the table above for an example request.
-To find the area under a function, send the request as c:d|f(x) where c is the starting x value, d is the ending x value, and f(x) is the function under which you want the curve between the two x values.
-To compute fractions, enter expressions as numerator(over)denominator. For example, to process 2/4 you must send in your expression as 2(over)4. The result expression will be in standard math notation (1/2, 3/4).
+_Tenga en cuenta_: Para encontrar la recta tangente de una función en un determinado valor de x, envíe la solicitud como c|f(x) donde c es el valor de x dado y f(x) es la expresión de la función, el separador es una barra vertical '|' . Consulte la tabla anterior para ver un ejemplo de solicitud.
+Para encontrar el área bajo una función, envíe la solicitud como c:d|f(x) donde c es el valor inicial de x, d es el valor final de x y f(x) es la función bajo la cual desea la curva entre los dos valores de x.
+Para calcular fracciones, ingrese expresiones como numerador (sobre) denominador. Por ejemplo, para procesar 2/4 debe enviar su expresión como 2 (sobre) 4. La expresión del resultado estará en notación matemática estándar (1/2, 3/4).
 """
 
 __mod_name__ = "Mᴀᴛʜs"
