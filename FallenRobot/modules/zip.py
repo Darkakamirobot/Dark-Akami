@@ -207,6 +207,7 @@ def get_lst_of_files(input_directory, output_lst):
 
 __help__ = """
 Oye, puedo convertir archivos aquí...
+
  ❍ /zip*:* Responde a un archivo de Telegram para comprimirlo en formato .zip.
  ❍ /unzip*:* Responde a un archivo de Telegram para descomprimirlo del formato .zip.
 """
