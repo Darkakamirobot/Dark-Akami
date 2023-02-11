@@ -458,7 +458,7 @@ __help__ = """
  ❍ /stickerid*:* Responde a un sticker para decirle su ID de archivo.
  ❍ /getsticker*:* Responde a un sticker para yo para cargar su archivo PNG sin formato.
  ❍ /kang*:* Responde a una pegatina para agregarla a tu paquete.
- ❍ /stickers*:* Encuentra stickers para un término dado en el catálogo de calcomanías combot
+ ❍ /stickers*:* Encuentra stickers para un término dado en el catálogo de calcomanías combot.
 """
 
 __mod_name__ = "Sᴛɪᴄᴋᴇʀ"
