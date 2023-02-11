@@ -411,7 +411,7 @@ resultará en la restricción de ese usuario.
 
  ❍ /setflood <int/'no'/'off'>*:* Activa o desactiva el control de inundaciones. int = cantidad de mensajes.
  *Ejemplo:* `/setflood 10`
- ❍ /setfloodmode <ban/kick/mute/tban/tmute> <value>*:* Acción a realizar cuando el usuario ha excedido el límite de inundación. ban/kick/mute/tmute/tban
+ ❍ /setfloodmode <ban/kick/mute/tban/tmute> <valor>*:* Acción a realizar cuando el usuario ha excedido el límite de inundación. ban/kick/mute/tmute/tban
 • *Nota:*
  • Se debe completar el valor para tban y tmute!!
  Puede ser:
