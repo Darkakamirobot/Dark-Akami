@@ -1053,23 +1053,25 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
-*Admins only:*
- ❍ /welcome <on/off>*:* enable/disable welcome messages.
- ❍ /welcome*:* shows current welcome settings.
- ❍ /welcome noformat*:* shows current welcome settings, without the formatting - useful to recycle your welcome messages!
- ❍ /goodbye*:* same usage and args as `/welcome`.
- ❍ /setwelcome <sometext>*:* set a custom welcome message. If used replying to media, uses that media.
- ❍ /setgoodbye <sometext>*:* set a custom goodbye message. If used replying to media, uses that media.
- ❍ /resetwelcome*:* reset to the default welcome message.
- ❍ /resetgoodbye*:* reset to the default goodbye message.
- ❍ /cleanwelcome <on/off>*:* On new member, try to delete the previous welcome message to avoid spamming the chat.
- ❍ /welcomemutehelp*:* gives information about welcome mutes.
- ❍ /cleanservice <on/off*:* deletes telegrams welcome/left service messages. 
- *Example:*
+*Sólo administradores:*
+
+ ❍ /welcome <on/off>*:* enable/disable mensajes de bienvenida.
+ ❍ /welcome*:* Muestra la configuración de bienvenida actual.
+ ❍ /welcome noformat*:* Muestra la configuración de bienvenida actual, sin el formato - útil para reciclar sus mensajes de bienvenida!
+ ❍ /goodbye*:* Mismo uso y argumentos que `/welcome`.
+ ❍ /setwelcome <sometext>*:* Establecer un mensaje de bienvenida personalizado. Si se usa respondiendo a los medios, usa esos medios.
+ ❍ /setgoodbye <sometext>*:* Establecer un mensaje de despedida personalizado. Si se usa respondiendo a los medios, usa esos medios.
+ ❍ /resetwelcome*:* Restablecer el mensaje de bienvenida predeterminado.
+ ❍ /resetgoodbye*:* Restablecer el mensaje de despedida predeterminado.
+ ❍ /cleanwelcome <on/off>*:* En el nuevo miembro, intente eliminar el mensaje de bienvenida anterior para evitar el spam en el chat.
+ ❍ /welcomemutehelp*:* Da información sobre silencios de bienvenida.
+ ❍ /cleanservice <on/off*:* Borra mensajes de servicio de bienvenida/dejado de telegramas. 
+ *Ejemplo:*
 user joined chat, user left chat.
 
 *Welcome markdown:* 
- ❍ /welcomehelp*:* view more formatting information for custom welcome/goodbye messages.
+
+ ❍ /welcomehelp*:* Muestra más información de formato para mensajes personalizados de bienvenida/despedida.
 """
 
 NEW_MEM_HANDLER = MessageHandler(Filters.status_update.new_chat_members, new_member)
