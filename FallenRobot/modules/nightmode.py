@@ -150,12 +150,12 @@ scheduler.add_job(job_open, trigger="cron", hour=6, minute=1)
 scheduler.start()
 
 __help__ = """
-*Admins Only*
+*Sólo administradores*
 
- ❍ /nightmode*:* Adds Group to NightMode Chats
- ❍ /rmnight*:* Removes Group From NightMode Chats
+ ❍ /nightmode*:* Agrega un grupo a los chats del modo nocturno.
+ ❍ /rmnight*:* Elimina el grupo de los chats del modo nocturno.
 
-*Note:* Night Mode chats get Automatically closed at 12 am(IST) and Automatically openned at 6 am(IST) to Prevent Night Spams.
+*Nota:* Los chats en modo nocturno se cierran automáticamente a las 12 a. m. (IST) y se abren automáticamente a las 6 a. m. (IST) para evitar el spam nocturno.
 """
 
 __mod_name__ = "Nɪɢʜᴛ​"
