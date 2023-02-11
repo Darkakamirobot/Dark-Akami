@@ -204,7 +204,7 @@ def start(update: Update, context: CallbackContext):
 
         else:
             first_name = update.effective_user.first_name
-            update.effective_message.reply_gif(
+            update.effective_message.reply_sticker(
                 "CgACAgQAAx0Cb5cjsQACCiZj58VRXGE0i1ahYL81AkQBd3QNVwACpwMAAubr9VI3KUJFf6cwzS4E"
             )
             update.effective_message.reply_text(
