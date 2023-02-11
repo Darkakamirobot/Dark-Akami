@@ -325,20 +325,20 @@ def weebify(update: Update, context: CallbackContext):
 
 
 __help__ = """
- ❍ /runs*:* reply a random string from an array of replies
- ❍ /slap*:* slap a user, or get slapped if not a reply
- ❍ /shrug*:* get shrug XD
- ❍ /table*:* get flip/unflip :v
- ❍ /decide*:* Randomly answers yes/no/maybe
- ❍ /toss*:* Tosses A coin
- ❍ /bluetext*:* check urself :V
- ❍ /roll*:* Roll a dice
- ❍ /rlg*:* Join ears,nose,mouth and create an emo ;-;
- ❍ /shout <keyword>*:* write anything you want to give loud shout
- ❍ /weebify <text>*:* returns a weebified text
- ❍ /sanitize*:* always use this before /pat or any contact
- ❍ /pat*:* pats a user, or get patted
- ❍ /8ball*:* predicts using 8ball method 
+ ❍ /runs*:* Responde una cadena aleatoria de una serie de respuestas.
+ ❍ /slap*:* Abofetea a un usuario, o ser abofeteado si no responde.
+ ❍ /shrug*:* Encoge los hombros XD
+ ❍ /table*:* Obten voltear/desvoltear :v
+ ❍ /decide*:* Responde aleatoriamente sí/no/tal vez.
+ ❍ /toss*:* Lanza una moneda.
+ ❍ /bluetext*:* Comprueba usted mismo :V
+ ❍ /roll*:* Rueda un dado.
+ ❍ /rlg*:* Une orejas, nariz, boca y crea un emoji ;-;
+ ❍ /shout <keyword>*:* Escribe lo que quieras para dar un fuerte grito.
+ ❍ /weebify <text>*:* Devuelve un texto weebificado.
+ ❍ /sanitize*:* siempre use esto antes de /pat o cualquier contacto.
+ ❍ /pat*:* Acaricia a un usuario, o ser acariciado.
+ ❍ /8ball*:* Predice usando el método 8ball. 
 """
 
 SANITIZE_HANDLER = DisableAbleCommandHandler("sanitize", sanitize)
