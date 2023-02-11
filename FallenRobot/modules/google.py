@@ -267,9 +267,9 @@ async def apk(e):
 __mod_name__ = "Gᴏᴏɢʟᴇ"
 
 __help__ = """
- ❍ /google <text>*:* Perform a google search
- ❍ /img <text>*:* Search Google for images and returns them\nFor greater no. of results specify lim, For eg: `/img hello lim=10`
- ❍ /app <appname>*:* Searches for an app in Play Store and returns its details.
- ❍ /reverse |pp |grs: Does a reverse image search of the media which it was replied to.
+ ❍ /google <text>*:* Realiza una búsqueda en Google.
+ ❍ /img <text>*:* Busca en Google imágenes y las devuelve\nPara nº mayor. de los resultados especifican limites, por ejemplo: `/img hola lim=10`
+ ❍ /app <appname>*:* Busca una aplicación en Play Store y devuelve sus detalles.
+ ❍ /reverse |pp |grs: Realiza una búsqueda de imagen inversa de los medios a los que se respondió.
 
 """
