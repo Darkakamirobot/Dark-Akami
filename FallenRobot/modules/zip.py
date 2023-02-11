@@ -36,16 +36,16 @@ async def _(event):
         return
 
     if not event.is_reply:
-        await event.reply("Reply to a file to compress it.")
+        await event.reply("Responde a un archivo para comprimirlo.")
         return
     if event.is_group:
         if not (await is_register_admin(event.input_chat, event.message.sender_id)):
             await event.reply(
-                "Hey, you are not admin. You can't use this command, But you can use in my PM 🙂"
+                "Oye, no eres administrador. No puedes usar este comando, pero puedes usarlo en mi Privado 🙂"
             )
             return
 
-    mone = await event.reply("⏳️ Please wait...")
+    mone = await event.reply("⏳️ Espera porfavor...")
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
         os.makedirs(TEMP_DOWNLOAD_DIRECTORY)
     if event.reply_to_msg_id:
@@ -116,16 +116,16 @@ async def _(event):
         return
 
     if not event.is_reply:
-        await event.reply("Reply to a zip file.")
+        await event.reply("Responde a un archivo zip.")
         return
     if event.is_group:
         if not (await is_register_admin(event.input_chat, event.message.sender_id)):
             await event.reply(
-                "Hey, You are not admin. You can't use this command, But you can use in my PM 🙂"
+                "Oye, no eres administrador. No puedes usar este comando, pero puedes usarlo en mi Privado 🙂"
             )
             return
 
-    mone = await event.reply("Processing...")
+    mone = await event.reply("Procesando...")
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
         os.makedirs(TEMP_DOWNLOAD_DIRECTORY)
     if event.reply_to_msg_id:
@@ -206,9 +206,9 @@ def get_lst_of_files(input_directory, output_lst):
 
 
 __help__ = """
-Hey I can convert files here..
- ❍ /zip*:* reply to a telegram file to compress it in .zip format
- ❍ /unzip*:* reply to a telegram file to decompress it from the .zip format
+Oye, puedo convertir archivos aquí...
+ ❍ /zip*:* Responde a un archivo de Telegram para comprimirlo en formato .zip.
+ ❍ /unzip*:* Responde a un archivo de Telegram para descomprimirlo del formato .zip.
 """
 
 __mod_name__ = "Zɪᴘᴘᴇʀ​"
