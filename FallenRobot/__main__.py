@@ -75,39 +75,39 @@ PM_START_TEXT = """
 *Ey* {}, 🥀
 
 *๏ Esto es* {} !
-➻ El bot de administración de grupos de telegramas más poderoso con algunas características increíbles y útiles.
+➻  Eʟ ʙᴏᴛ ᴅᴇ ᴀᴅᴍɪɴɪsᴛʀᴀᴄɪᴏɴ ᴅᴇ ɢʀᴜᴘᴏs ᴅᴇ ᴛᴇʟᴇɢʀᴀᴍᴀs ᴍᴀs ᴘᴏᴅᴇʀᴏsᴏ ᴄᴏɴ ᴀʟɢᴜɴᴀs ᴄᴀʀᴀᴄᴛᴇʀísᴛɪᴄᴀs ɪɴᴄʀᴇɪʙʟᴇs ʏ ᴜᴛɪʟᴇs.
 
 ──────────────────
-*๏ Haga clic en el botón de ayuda para obtener información sobre mis módulos y comandos.*
+*๏ Hᴀɢᴀ ᴄʟɪᴄ ᴇɴ ᴇʟ ʙᴏᴛᴏɴ ᴅᴇ ᴀʏᴜᴅᴀ ᴘᴀʀᴀ ᴏʙᴛᴇɴᴇʀ ɪɴғᴏʀᴍᴀᴄɪᴏɴ sᴏʙʀᴇ ᴍɪs ᴍᴏᴅᴜʟᴏs ʏ ᴄᴏᴍᴀɴᴅᴏs.*
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="Agrégame a tu grupo ",
+            text=" Aɢʀᴇɢᴀᴍᴇ ᴀ ᴛᴜ ɢʀᴜᴘᴏ ",
             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         ),
     ],
     [
-        InlineKeyboardButton(text="Ayuda y comandos", callback_data="help_back"),
+        InlineKeyboardButton(text="⛑ Aʏᴜᴅᴀ ʏ ᴄᴏᴍᴀɴᴅᴏs ▶️", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="❄ Acerca de ❄", callback_data="fallen_"),
-        InlineKeyboardButton(text="✨ Apoyo ✨", url=f"https://t.me/{SUPPORT_CHAT}"),
+        InlineKeyboardButton(text="❄ Aᴄᴇʀᴄᴀ ᴅᴇ ❄", callback_data="fallen_"),
+        InlineKeyboardButton(text="✨ Aᴘᴏʏᴏ ✨", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
     [
-        InlineKeyboardButton(text="🥀 Desarrollador  🥀", url=f"tg://user?id={OWNER_ID}"),
-        InlineKeyboardButton(text="☁️ Fuente ☁️", callback_data="source_"),
+        InlineKeyboardButton(text="🥀 Dᴇsᴀʀʀᴏʟʟᴀᴅᴏʀ  🥀", url=f"tg://user?id={OWNER_ID}"),
+        InlineKeyboardButton(text="☁️ Fᴜᴇɴᴛᴇ ☁️", callback_data="source_"),
     ],
 ]
 
 HELP_STRINGS = f"""
-*» {BOT_NAME} Funciones exclusivas*
+*» {BOT_NAME} Fᴜɴᴄɪᴏɴᴇs ᴇxᴄʟᴜsɪᴠᴀs*
 
-➲ /start : iniciarme | Según yo ya lo hiciste ✓
-➲ /help  : Sección de comandos disponibles. 
-  ‣ soy PM : Le enviaremos ayuda para todos los módulos compatibles.
-  ‣ En grupo : Te redirigirá a pm, con todos los módulos de ayuda."""
+➲ /start : Iɴɪᴄɪᴀᴍᴇ | Sᴇɢᴜɴ ʏᴏ ʏᴀ ʟᴏ ʜɪᴄɪsᴛᴇ ✓
+➲ /help  : Sᴇᴄᴄɪᴏɴ ᴅᴇ ᴄᴏᴍᴀɴᴅᴏs ᴅɪsᴘᴏɴɪʙʟᴇs. 
+  ‣ Eɴ Pʀɪᴠᴀᴅᴏ :  Lᴇ ᴇɴᴠɪᴀʀᴇᴍᴏs ᴀʏᴜᴅᴀ ᴘᴀʀᴀ ᴛᴏᴅᴏs ʟᴏs ᴍᴏᴅᴜʟᴏs ᴄᴏᴍᴘᴀᴛɪʙʟᴇs.
+  ‣ Eɴ ɢʀᴜᴘᴏ : Tᴇ ʀᴇᴅɪʀɪɢɪʀᴀ ᴀʟ ᴘʀɪᴠᴀᴅᴏ, ᴄᴏɴ ᴛᴏᴅᴏs ʟᴏs ᴍᴏᴅᴜʟᴏs ᴅᴇ ᴀʏᴜᴅᴀ."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -216,7 +216,7 @@ def start(update: Update, context: CallbackContext):
     else:
         update.effective_message.reply_photo(
             START_IMG,
-            caption="ɪ ᴀᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ !\n<b>ɪ ᴅɪᴅɴ'ᴛ sʟᴇᴘᴛ sɪɴᴄᴇ​:</b> <code>{}</code>".format(
+            caption="Esᴛᴏʏ ᴠɪᴠᴏ ʙᴇʙᴇ !\n<b>ɴᴏ ʜᴇ ᴅᴏʀᴍɪᴅᴏ ᴅᴇsᴅᴇ​:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -350,37 +350,37 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
     if query.data == "fallen_":
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
-            text=f"*Ey,*🥀\n  *esto es {BOT_NAME}*"
-            "\n*Un poderoso bot de administración de grupos creado para ayudarlo a administrar su grupo fácilmente y protegerlo de los spammers.*"
-            "\n*Escrito en python y mongo db como base de datos.*"
+            text=f"*Eʏ,*🥀\n  *ᴇsᴛᴏ ᴇs {BOT_NAME}*"
+            "\n*Uɴ ᴘᴏᴅᴇʀᴏsᴏ ʙᴏᴛ ᴅᴇ ᴀᴅᴍɪɴɪsᴛʀᴀᴄɪóɴ ᴅᴇ ɢʀᴜᴘᴏs ᴄʀᴇᴀᴅᴏ ᴘᴀʀᴀ ᴀʏᴜᴅᴀʀʟᴏ ᴀ ᴀᴅᴍɪɴɪsᴛʀᴀʀ sᴜ ɢʀᴜᴘᴏ ғᴀᴄɪʟᴍᴇɴᴛᴇ ʏ ᴘʀᴏᴛᴇɢᴇʀʟᴏ ᴅᴇ ʟᴏs sᴘᴀᴍᴍᴇʀs.*"
+            "\n*Esᴄʀɪᴛᴏ ᴇɴ ᴘʏᴛʜᴏɴ ʏ ᴍᴏɴɢᴏ ᴅʙ ᴄᴏᴍᴏ ʙᴀsᴇ ᴅᴇ ᴅᴀᴛᴏs.*"
             "\n\n────────────────────"
-            f"\n*➻ tiempo de actividade »* {uptime}"
-            f"\n*➻ Usuarios  »* {sql.num_users()}"
-            f"\n*➻ charlas »* {sql.num_chats()}"
+            f"\n*➻ ᴛɪᴇᴍᴘᴏ ᴅᴇ ᴀᴄᴛɪᴠɪᴅᴀᴅ »* {uptime}"
+            f"\n*➻ Usᴜᴀʀɪᴏs  »* {sql.num_users()}"
+            f"\n*➻ ɢʀᴜᴘᴏs »* {sql.num_chats()}"
             "\n────────────────────"
-            "\n\n➲ Puedo restringir usuarios "
-            "\n➲  Tengo un sistema anti inundaciones avanzado. ."
-            "\n➲  Puedo saludar a los usuarios con un mensaje de bienvenida personalizado y también puedes establecer reglas para tu grupo."
-            "\n➲  Puedo advertir a los usuarios."
-            "\n➲  puedo guardar notas ",
+            "\n\n➲ Pᴜᴇᴅᴏ ʀᴇsᴛʀɪɴɢɪʀ ᴜsᴜᴀʀɪᴏs "
+            "\n➲  Tᴇɴɢᴏ ᴜɴ sɪsᴛᴇᴍᴀ ᴀɴᴛɪ ɪɴᴜɴᴅᴀᴄɪᴏɴᴇs ᴀᴠᴀɴᴢᴀᴅᴏ. ."
+            "\n➲  Pᴜᴇᴅᴏ sᴀʟᴜᴅᴀʀ ᴀ ʟᴏs ᴜsᴜᴀʀɪᴏs ᴄᴏɴ ᴜɴ ᴍᴇɴsᴀJᴇ ᴅᴇ ʙɪᴇɴᴠᴇɴɪᴅᴀ ᴘᴇʀsᴏɴᴀʟɪᴢᴀᴅᴏ ʏ ᴛᴀᴍʙɪᴇɴ ᴘᴜᴇᴅᴇs ᴇsᴛᴀʙʟᴇᴄᴇʀ ʀᴇɢʟᴀs ᴘᴀʀᴀ ᴛᴜ ɢʀᴜᴘᴏ."
+            "\n➲  Pᴜᴇᴅᴏ ᴀᴅᴠᴇʀᴛɪʀ ᴀ ʟᴏs ᴜsᴜᴀʀɪᴏs."
+            "\n➲  ᴘᴜᴇᴅᴏ ɢᴜᴀʀᴅᴀʀ ɴᴏᴛᴀs ",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="Apoyo", callback_data="fallen_support"
+                            text="Aᴘᴏʏᴏ", callback_data="fallen_support"
                         ),
                         InlineKeyboardButton(
-                            text="Comandos", callback_data="help_back"
+                            text="ᴄᴏᴍᴀɴᴅᴏs", callback_data="help_back"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="Desarrollador", url=f"tg://user?id={OWNER_ID}"
+                            text="Dᴇsᴀʀʀᴏʟʟᴀᴅᴏʀ", url=f"tg://user?id={OWNER_ID}"
                         ),
                         InlineKeyboardButton(
-                            text="sᴏᴜʀᴄᴇ",
+                            text="Fᴜᴇɴᴛᴇ",
                             callback_data="source_",
                         ),
                     ],
@@ -392,25 +392,25 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
         )
     elif query.data == "fallen_support":
         query.message.edit_text(
-            text="*๏ Haga clic en los botones a continuación para obtener más información sobre.*"
-            f"\n\n Si multa algún error o si desea comentarios, Por favor repórtelo en el chat de soporte.",
+            text="*๏ Hᴀɢᴀ ᴄʟɪᴄ ᴇɴ ʟᴏs ʙᴏᴛᴏɴᴇs ᴀ ᴄᴏɴᴛɪɴᴜᴀᴄɪᴏɴ ᴘᴀʀᴀ ᴏʙᴛᴇɴᴇʀ ᴍᴀs ɪɴғᴏʀᴍᴀᴄɪᴏɴ sᴏʙʀᴇ.*"
+            f"\n\n Sɪ ᴇɴᴄᴜᴇɴᴛʀᴀ ᴀʟɢᴜɴ ᴇʀʀᴏʀ ᴇɴ {BOT_NAME} ᴏ sɪ ᴅᴇsᴇᴀ ᴅᴀʀ sᴜ ᴏᴘɪɴɪóɴ sᴏʙʀᴇ {BOT_NAME}, Pᴏʀ ғᴀᴠᴏʀ ʀᴇᴘᴏʀᴛᴇʟᴏ ᴇɴ ᴇʟ ᴄʜᴀᴛ ᴅᴇ sᴏᴘᴏʀᴛᴇ.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="Apoyo", url=f"https://t.me/{SUPPORT_CHAT}"
+                            text="Aᴘᴏʏᴏ", url=f"https://t.me/{SUPPORT_CHAT}"
                         ),
                         InlineKeyboardButton(
-                            text="Actualizaciones", url=f"https://t.me/{SUPPORT_CHAT}"
+                            text="Aᴄᴛᴜᴀʟɪᴢᴀᴄɪᴏɴᴇs", url=f"https://t.me/{SUPPORT_CHAT}"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="Desarrollador", url=f"tg://user?id={OWNER_ID}"
+                            text="Dᴇsᴀʀʀᴏʟʟᴀᴅᴏʀ", url=f"tg://user?id={OWNER_ID}"
                         ),
                         InlineKeyboardButton(
-                            text="GitHub",
+                            text="GɪᴛHᴜʙ",
                             url="https://github.com/AnonymousX1025",
                         ),
                     ],
