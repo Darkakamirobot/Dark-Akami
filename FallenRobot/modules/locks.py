@@ -563,27 +563,27 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
-Do stickers annoy you? or want to avoid people sharing links? or pictures? \
-You're in the right place!
-The locks module allows you to lock away some common items in the \
-telegram world; the bot will automatically delete them!
+¿Te molestan los stickers? o quieres evitar que la gente comparta enlaces? o fotos? \
+Estás en el lugar correcto!
+El módulo de bloqueos le permite bloquear algunos elementos comunes en el \
+mundo de los telegramas; ¡El bot los eliminará automáticamente!
 
- ❍ /locktypes*:* Lists all possible locktypes
+ ❍ /locktypes*:* Enumera todos los tipos de bloqueo posibles.
  
-*Admins only:*
- ❍ /lock <type>*:* Lock items of a certain type (not available in private)
- ❍ /unlock <type>*:* Unlock items of a certain type (not available in private)
- ❍ /locks*:* The current list of locks in this chat.
+*Sólo administradores:*
+ ❍ /lock <type>*:* Bloquea elementos de cierto tipo (no disponible en privado).
+ ❍ /unlock <type>*:* Desbloquea elementos de cierto tipo (no disponible en privado).
+ ❍ /locks*:* La lista actual de bloqueos en este chat.
  
-Locks can be used to restrict a group's users.
-eg:
-Locking urls will auto-delete all messages with urls, locking stickers will restrict all \
-non-admin users from sending stickers, etc.
-Locking bots will stop non-admins from adding bots to the chat.
+Los bloqueos se pueden usar para restringir los usuarios de un grupo.
+ej:
+El bloqueo de direcciones URL eliminará automáticamente todos los mensajes con direcciones URL, el bloqueo de stickers restringirá todos \
+usuarios que no son administradores de enviar stickers, etc..
+El bloqueo de bots evitará que los no administradores agreguen bots al chat.
 
-*Note:*
- • Unlocking permission *info* will allow members (non-admins) to change the group information, such as the description or the group name
- • Unlocking permission *pin* will allow members (non-admins) to pin a message in a group
+*Nota:*
+ • Permiso de desbloqueo *info* permitirá a los miembros (no administradores) cambiar la información del grupo, como la descripción o el nombre del grupo.
+ • Permiso de desbloqueo *pin* permitirá a los miembros (no administradores) anclar un mensaje en un grupo.
 """
 
 __mod_name__ = "Lᴏᴄᴋs"
