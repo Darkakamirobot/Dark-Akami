@@ -111,15 +111,15 @@ def add_bluetext_ignore(update: Update, context: CallbackContext):
         val = args[0].lower()
         added = sql.chat_ignore_command(chat.id, val)
         if added:
-            reply = "<b>{}</b> has been added to bluetext cleaner ignore list.".format(
+            reply = "<b>{}</b> se ha agregado a la lista de ignorados del limpiador bluetext.".format(
                 args[0]
             )
         else:
-            reply = "Command is already ignored."
+            reply = "El comando ya está ignorado."
         message.reply_text(reply, parse_mode=ParseMode.HTML)
 
     else:
-        reply = "No command supplied to be ignored."
+        reply = "No se ha proporcionado ningún comando para ignorar."
         message.reply_text(reply)
 
 
@@ -134,16 +134,16 @@ def remove_bluetext_ignore(update: Update, context: CallbackContext):
         removed = sql.chat_unignore_command(chat.id, val)
         if removed:
             reply = (
-                "<b>{}</b> has been removed from bluetext cleaner ignore list.".format(
+                "<b>{}</b> ha sido eliminado de la lista de ignorados del limpiador bluetext.".format(
                     args[0]
                 )
             )
         else:
-            reply = "Command isn't ignored currently."
+            reply = "El comando no se ignora actualmente."
         message.reply_text(reply, parse_mode=ParseMode.HTML)
 
     else:
-        reply = "No command supplied to be unignored."
+        reply = "No se suministra ningún comando para ser ignorado."
         message.reply_text(reply)
 
 
@@ -156,15 +156,15 @@ def add_bluetext_ignore_global(update: Update, context: CallbackContext):
         val = args[0].lower()
         added = sql.global_ignore_command(val)
         if added:
-            reply = "<b>{}</b> has been added to global bluetext cleaner ignore list.".format(
+            reply = "<b>{}</b> se ha agregado a la lista global de ignorados del limpiador del bluetext.".format(
                 args[0]
             )
         else:
-            reply = "Command is already ignored."
+            reply = "El comando ya está ignorado."
         message.reply_text(reply, parse_mode=ParseMode.HTML)
 
     else:
-        reply = "No command supplied to be ignored."
+        reply = "No se ha proporcionado ningún comando para ignorar."
         message.reply_text(reply)
 
 
@@ -177,15 +177,15 @@ def remove_bluetext_ignore_global(update: Update, context: CallbackContext):
         val = args[0].lower()
         removed = sql.global_unignore_command(val)
         if removed:
-            reply = "<b>{}</b> has been removed from global bluetext cleaner ignore list.".format(
+            reply = "<b>{}</b> se ha eliminado de la lista de ignorados del limpiador global del bluetext.".format(
                 args[0]
             )
         else:
-            reply = "Command isn't ignored currently."
+            reply = "El comando no se ignora actualmente."
         message.reply_text(reply, parse_mode=ParseMode.HTML)
 
     else:
-        reply = "No command supplied to be unignored."
+        reply = "No se suministra ningún comando para ser ignorado."
         message.reply_text(reply)
 
 
@@ -199,19 +199,19 @@ def bluetext_ignore_list(update: Update, context: CallbackContext):
     text = ""
 
     if global_ignored_list:
-        text = "The following commands are currently ignored globally from bluetext cleaning :\n"
+        text = "Los siguientes comandos se ignoran actualmente globalmente desde la limpieza de bluetext :\n"
 
         for x in global_ignored_list:
             text += f" - <code>{x}</code>\n"
 
     if local_ignore_list:
-        text += "\nThe following commands are currently ignored locally from bluetext cleaning :\n"
+        text += "\nLos siguientes comandos se ignoran actualmente localmente desde la limpieza de bluetext :\n"
 
         for x in local_ignore_list:
             text += f" - <code>{x}</code>\n"
 
     if text == "":
-        text = "No commands are currently ignored from bluetext cleaning."
+        text = "Actualmente no se ignoran comandos de la limpieza de bluetext."
         message.reply_text(text)
         return
 
