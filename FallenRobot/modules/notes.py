@@ -498,21 +498,21 @@ def __chat_settings__(chat_id, user_id):
 
 __help__ = """
 
- ❍ `/get <notename>`*:* get the note with this notename
- ❍ `#<notename>`*:* same as /get
- ❍ `/notes` or `/saved`*:* list all saved notes in this chat
- ❍ `/number` *:* Will pull the note of that number in the list. 
-If you would like to retrieve the contents of a note without any formatting, use `/get <notename> noformat`. This can \
-be useful when updating a current note.
+ ❍ `/get <notename>`*:* Obtén la nota con este nombre de nota.
+ ❍ `#<notebnme>`*:* igual que /get
+ ❍ `/notes` or `/saved`*:* Enumera todas las notas guardadas en este chat.
+ ❍ `/number` *:* Tirará la nota de ese número en la lista. 
+Si desea recuperar el contenido de una nota sin ningún formato, utilice `/get <notename> noformat`. Esto puede \
+ser útil al actualizar una nota actual.
 
-*Admins only:*
- ❍ `/save <notename> <notedata>`*:* saves notedata as a note with name notename
-A button can be added to a note by using standard markdown link syntax - the link should just be prepended with a \
-`buttonurl:` section, as such: `[somelink](buttonurl:example.com)`. Check `/markdownhelp` for more info.
- ❍ `/save <notename>`*:* save the replied message as a note with name notename
- ❍ `/clear <notename>`*:* clear note with this name
- ❍ `/removeallnotes`*:* removes all notes from the group
- *Note:* Note names are case-insensitive, and they are automatically converted to lowercase before getting saved.
+*Sólo administardores:*
+ ❍ `/save <notename> <notedata>`*:* Guarda notatata como una nota con nombre notename.
+Se puede agregar un botón a una nota usando la sintaxis de enlace de rebajas estándar - el enlace debe ir precedido de un \
+`buttonurl:` section, como tal: `[somelink](buttonurl:example.com)`. Revisa `/markdownhelp` para más información.
+ ❍ `/save <notename>`*:* Guarda el mensaje respondido como una nota con nombre notename.
+ ❍ `/clear <notename>`*:* Borra la nota con este nombre.
+ ❍ `/removeallnotes`*:* Elimina todas las notas del grupo.
+ *Nota:* Los nombres de las notas no distinguen entre mayúsculas y minúsculas y se convierten automáticamente a minúsculas antes de guardarse.
 """
 
 __mod_name__ = "Nᴏᴛᴇs"
