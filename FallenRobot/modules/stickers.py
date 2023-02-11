@@ -455,10 +455,10 @@ def makepack_internal(
 
 
 __help__ = """
- ❍ /stickerid*:* reply to a sticker to me to tell you its file ID.
- ❍ /getsticker*:* reply to a sticker to me to upload its raw PNG file.
- ❍ /kang*:* reply to a sticker to add it to your pack.
- ❍ /stickers*:* Find stickers for given term on combot sticker catalogue
+ ❍ /stickerid*:* Responde a un sticker para decirle su ID de archivo.
+ ❍ /getsticker*:* Responde a un sticker para yo para cargar su archivo PNG sin formato.
+ ❍ /kang*:* Responde a una pegatina para agregarla a tu paquete.
+ ❍ /stickers*:* Encuentra stickers para un término dado en el catálogo de calcomanías combot
 """
 
 __mod_name__ = "Sᴛɪᴄᴋᴇʀ"
