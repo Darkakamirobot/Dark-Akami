@@ -220,11 +220,11 @@ def bluetext_ignore_list(update: Update, context: CallbackContext):
 
 
 __help__ = """
-*Blue text cleaner* removed any made up commands that people send in your chat.
- ❍ /cleanblue <on/off/yes/no>*:* clean commands after sending
- ❍ /ignoreblue <word>*:* prevent auto cleaning of the command
- ❍ /unignoreblue <word>*:* remove prevent auto cleaning of the command
- ❍ /listblue*:* list currently whitelisted commands
+*Blue text cleaner* Elimino cualquier comando inventado que la gente envíe en su chat.
+ ❍ /cleanblue <on/off/yes/no>*:* Limpie comandos después de enviar.
+ ❍ /ignoreblue <palabra>*:* Evite la limpieza automática del comando.
+ ❍ /unignoreblue <palabra>*:* Elimine evitar la limpieza automática del comando.
+ ❍ /listblue*:* Enumere los comandos actualmente en la lista blanca.
 """
 
 SET_CLEAN_BLUE_TEXT_HANDLER = CommandHandler("cleanblue", set_blue_text_must_click)
