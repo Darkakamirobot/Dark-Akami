@@ -87,10 +87,11 @@ def resize_image(image):
 
 
 __help__ = """
-I can upload files to Telegraph
- ❍ /tgm :Get Telegraph Link Of Replied Media
- ❍ /tgt :Get Telegraph Link of Replied Text
- ❍ /tgt [custom name]: Get telegraph link of replied text with custom name.
+Puedo subir archivos a Telegraph
+
+ ❍ /tgm :Obten el enlace Telegraph de los medios respondidos.
+ ❍ /tgt :Obten el enlace Telegraph del texto respondido.
+ ❍ /tgt [custom name]: Obten el enlace de telegraph del texto respondido con un nombre personalizado.
 """
 
 __mod_name__ = "T-Gʀᴀᴘʜ"
