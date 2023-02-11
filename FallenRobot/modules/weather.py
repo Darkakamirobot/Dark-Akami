@@ -36,10 +36,10 @@ async def _(event):
 
 
 __help__ = """
-I can find weather of all cities
+Puedo encontrar el clima de todas las ciudades.
 
- ❍ /weather <city>*:* Advanced weather module, usage same as /weather
- ❍ /weather moon*:* Get the current status of moon
+ ❍ /weather <city>*:* Módulo meteorológico avanzado, uso igual que /weather.
+ ❍ /weather moon*:* Obtener el estado actual de la luna.
 """
 
 __mod_name__ = "Wᴇᴀᴛʜᴇʀ"
