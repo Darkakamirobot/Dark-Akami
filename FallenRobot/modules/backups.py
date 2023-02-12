@@ -41,7 +41,7 @@ def import_data(update, context):
         chat_name = dispatcher.bot.getChat(conn).title
     else:
         if update.effective_message.chat.type == "private":
-            update.effective_message.reply_text("This is a group only command!")
+            update.effective_message.reply_text("Este es un comando solo para grupos!")
             return ""
 
         chat = update.effective_chat
@@ -52,7 +52,7 @@ def import_data(update, context):
             file_info = context.bot.get_file(msg.reply_to_message.document.file_id)
         except BadRequest:
             msg.reply_text(
-                "Try downloading and uploading the file yourself again, This one seem broken to me!"
+                "Intente descargar y cargar el archivo usted mismo nuevamente, este me parece roto!"
             )
             return
 
@@ -64,7 +64,7 @@ def import_data(update, context):
         # only import one group
         if len(data) > 1 and str(chat.id) not in data:
             msg.reply_text(
-                "There are more than one group in this file and the chat.id is not same! How am i supposed to import it?"
+                "¡Hay más de un grupo en este archivo y el chat.id no es el mismo! ¿Cómo se supone que debo importarlo?"
             )
             return
 
@@ -72,19 +72,19 @@ def import_data(update, context):
         try:
             if data.get(str(chat.id)) is None:
                 if conn:
-                    text = "Backup comes from another chat, I can't return another chat to chat *{}*".format(
+                    text = "La copia de seguridad proviene de otro chat, no puedo devolver otro chat al chat *{}*".format(
                         chat_name
                     )
                 else:
-                    text = "Backup comes from another chat, I can't return another chat to this chat"
+                    text = "La copia de seguridad proviene de otro chat, no puedo devolver otro chat a este chat"
                 return msg.reply_text(text, parse_mode="markdown")
         except Exception:
-            return msg.reply_text("There was a problem while importing the data!")
+            return msg.reply_text("Hubo un problema al importar los datos!")
         # Check if backup is from self
         try:
             if str(context.bot.id) != str(data[str(chat.id)]["bot"]):
                 return msg.reply_text(
-                    "Backup from another bot that is not suggested might cause the problem, documents, photos, videos, audios, records might not work as it should be."
+                    "La copia de seguridad de otro bot que no se sugiere puede causar el problema; es posible que los documentos, las fotos, los videos, los audios y los registros no funcionen como deberían."
                 )
         except Exception:
             pass
@@ -99,11 +99,11 @@ def import_data(update, context):
                 mod.__import_data__(str(chat.id), data)
         except Exception:
             msg.reply_text(
-                f"An error occurred while recovering your data. The process failed. If you experience a problem with this, please take it to @{SUPPORT_CHAT}"
+                f"Ocurrió un error al recuperar sus datos. El proceso fracasó. Si tiene algún problema con esto, llévelo a @{SUPPORT_CHAT}"
             )
 
             LOGGER.exception(
-                "Imprt for the chat %s with the name %s failed.",
+                "Falló la impresión del chat %s con el nombre %s .",
                 str(chat.id),
                 str(chat.title),
             )
@@ -112,9 +112,9 @@ def import_data(update, context):
         # TODO: some of that link logic
         # NOTE: consider default permissions stuff?
         if conn:
-            text = "Backup fully restored on *{}*.".format(chat_name)
+            text = "Copia de seguridad completamente restaurada en *{}*.".format(chat_name)
         else:
-            text = "Backup fully restored"
+            text = "Copia de seguridad completamente restaurada"
         msg.reply_text(text, parse_mode="markdown")
 
 
@@ -134,7 +134,7 @@ def export_data(update, context):
         # chat_name = dispatcher.bot.getChat(conn).title
     else:
         if update.effective_message.chat.type == "private":
-            update.effective_message.reply_text("This is a group only command!")
+            update.effective_message.reply_text("Este es un comando solo para grupos!")
             return ""
         chat = update.effective_chat
         chat_id = update.effective_chat.id
@@ -149,7 +149,7 @@ def export_data(update, context):
                 "%H:%M:%S %d/%m/%Y", time.localtime(checkchat.get("value"))
             )
             update.effective_message.reply_text(
-                "You can only backup once a day!\nYou can backup again in about `{}`".format(
+                "Solo puedes hacer una copia de seguridad una vez al día!\nPuede hacer una copia de seguridad nuevamente en aproximadamente `{}`".format(
                     timeformatt
                 ),
                 parse_mode=ParseMode.MARKDOWN,
@@ -332,7 +332,7 @@ def export_data(update, context):
     try:
         context.bot.sendMessage(
             EVENT_LOGS,
-            "*Successfully imported backup:*\nChat: `{}`\nChat ID: `{}`\nOn: `{}`".format(
+            "*Copia de seguridad importada con éxito:*\nChat: `{}`\nChat ID: `{}`\nEn: `{}`".format(
                 chat.title, chat_id, tgl
             ),
             parse_mode=ParseMode.MARKDOWN,
@@ -342,7 +342,7 @@ def export_data(update, context):
     context.bot.sendDocument(
         current_chat_id,
         document=open("FallenRobot{}.backup".format(chat_id), "rb"),
-        caption="📤*Successfully Exported backup:*\nChat: `{}`\nChat ID: `{}`\nOn: `{}`\n\nNote: This `FallenRobot-Backup` was specially made for notes 📚.".format(
+        caption="📤*Copia de seguridad exportada con éxito:*\nChat: `{}`\nChat ID: `{}`\nEn: `{}`\n\nNota: Este `FallenRobot-Backup` fue hecho especialmente para notas 📚.".format(
             chat.title, chat_id, tgl
         ),
         timeout=360,
@@ -370,7 +370,7 @@ def get_chat(chat_id, chat_data):
 __mod_name__ = "Bᴀᴄᴋᴜᴘ"
 
 __help__ = """
-*Solo para el propietario del grupo:*
+*Sólo para el propietario del grupo:*
 
  ❍ /import: Responda al archivo de copia de seguridad para que el grupo Butler / Emilia importe tanto como sea posible, lo que facilita mucho las transferencias! \
  Tenga en cuenta que los archivos / fotos no se pueden importar debido a las restricciones de Telegram.
