@@ -77,14 +77,14 @@ def set_blue_text_must_click(update: Update, context: CallbackContext):
         val = args[0].lower()
         if val in ("off", "no"):
             sql.set_cleanbt(chat.id, False)
-            reply = "Bluetext cleaning has been disabled for <b>{}</b>".format(
+            reply = "Bluetext cleaning ha sido deshabilitada para <b>{}</b>".format(
                 html.escape(chat.title)
             )
             message.reply_text(reply, parse_mode=ParseMode.HTML)
 
         elif val in ("yes", "on"):
             sql.set_cleanbt(chat.id, True)
-            reply = "Bluetext cleaning has been enabled for <b>{}</b>".format(
+            reply = "Bluetext cleaning se ha habilitado para <b>{}</b>".format(
                 html.escape(chat.title)
             )
             message.reply_text(reply, parse_mode=ParseMode.HTML)
@@ -95,7 +95,7 @@ def set_blue_text_must_click(update: Update, context: CallbackContext):
     else:
         clean_status = sql.is_enabled(chat.id)
         clean_status = "Enabled" if clean_status else "Disabled"
-        reply = "Bluetext cleaning for <b>{}</b> : <b>{}</b>".format(
+        reply = "Bluetext cleaning para <b>{}</b> : <b>{}</b>".format(
             html.escape(chat.title), clean_status
         )
         message.reply_text(reply, parse_mode=ParseMode.HTML)
@@ -143,7 +143,7 @@ def remove_bluetext_ignore(update: Update, context: CallbackContext):
         message.reply_text(reply, parse_mode=ParseMode.HTML)
 
     else:
-        reply = "No se suministra ningún comando para ser ignorado."
+        reply = "No se ha proporcionado ningún comando para ignorar."
         message.reply_text(reply)
 
 
@@ -221,6 +221,7 @@ def bluetext_ignore_list(update: Update, context: CallbackContext):
 
 __help__ = """
 *Blue text cleaner* Elimino cualquier comando inventado que la gente envíe en su chat.
+
  ❍ /cleanblue <on/off/yes/no>*:* Limpie comandos después de enviar.
  ❍ /ignoreblue <palabra>*:* Evite la limpieza automática del comando.
  ❍ /unignoreblue <palabra>*:* Elimine evitar la limpieza automática del comando.
