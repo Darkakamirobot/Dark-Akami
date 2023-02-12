@@ -403,12 +403,12 @@ def selfunban(context: CallbackContext, update: Update) -> str:
 __help__ = """
  ❍ /kickme*:* Patea al usuario que emitió el comando.
 
-*Solo administradores:*
- ❍ /ban <userhandle>*:* Prohíbe a un usuario. (a través de identificador o respuesta)
- ❍ /sban <userhandle>*:* Prohibe silenciosamente a un usuario. Borra el comando, respondiendo al mensaje y no respondiendo. (a través de identificador o respuesta).
- ❍ /tban <userhandle> x(m/h/d)*:* Banea a un usuario por `x` tiempo. (a través de identificador o respuesta). `m` = `minutos`, `h` = `horas`, `d` = `días`.
- ❍ /unban <userhandle>*:* Desbanea a un usuario. (a través de identificador o respuesta).
- ❍ /kick <userhandle>*:* Expulsa a un usuario del grupo (mediante identificador o respuesta).
+*Sólo administradores:*
+ ❍ /ban <user/id>*:* Prohíbe a un usuario. (a través de identificador o respuesta)
+ ❍ /sban <user/id>*:* Prohibe silenciosamente a un usuario. Borra el comando, respondiendo al mensaje y no respondiendo. (a través de identificador o respuesta).
+ ❍ /tban <user/id> x(m/h/d)*:* Banea a un usuario por `x` tiempo. (a través de identificador o respuesta). `m` = `minutos`, `h` = `horas`, `d` = `días`.
+ ❍ /unban <user/id>*:* Desbanea a un usuario. (a través de identificador o respuesta).
+ ❍ /kick <user/id>*:* Expulsa a un usuario del grupo (mediante identificador o respuesta).
 """
 
 BAN_HANDLER = CommandHandler(["ban", "sban"], ban)
