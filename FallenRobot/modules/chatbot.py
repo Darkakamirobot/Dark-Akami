@@ -49,7 +49,7 @@ def fallenrm(update: Update, context: CallbackContext) -> str:
             )
         else:
             update.effective_message.edit_text(
-                "{} ᴄʜᴀᴛʙᴏᴛ ᴅɪsᴀʙʟᴇᴅ ʙʏ {}.".format(
+                "{} ᴄʜᴀᴛʙᴏᴛ ᴅᴇsʜᴀʙɪʟɪᴛᴀᴅᴏ ᴘᴏʀ {}.".format(
                     dispatcher.bot.first_name, mention_html(user.id, user.first_name)
                 ),
                 parse_mode=ParseMode.HTML,
@@ -78,7 +78,7 @@ def fallenadd(update: Update, context: CallbackContext) -> str:
             )
         else:
             update.effective_message.edit_text(
-                "{} ᴄʜᴀᴛʙᴏᴛ ᴇɴᴀʙʟᴇᴅ ʙʏ {}.".format(
+                "{} ᴄʜᴀᴛʙᴏᴛ ʜᴀʙɪʟɪᴛᴀᴅᴏ ᴘᴏʀ {}.".format(
                     dispatcher.bot.first_name, mention_html(user.id, user.first_name)
                 ),
                 parse_mode=ParseMode.HTML,
@@ -92,7 +92,7 @@ def fallenadd(update: Update, context: CallbackContext) -> str:
 @gloggable
 def fallen(update: Update, context: CallbackContext):
     message = update.effective_message
-    msg = "• ᴄʜᴏᴏsᴇ ᴀɴ ᴏᴩᴛɪᴏɴ ᴛᴏ ᴇɴᴀʙʟᴇ/ᴅɪsᴀʙʟᴇ ᴄʜᴀᴛʙᴏᴛ"
+    msg = "• ᴇʟɪɢᴇ ᴜɴᴀ ᴏᴘᴄɪóɴ ᴘᴀʀᴀ ʜᴀʙɪʟɪᴛᴀʀ/ᴅᴇsʜᴀʙɪʟɪᴛᴀʀ ᴇʟ ᴄʜᴀᴛʙᴏᴛ"
     keyboard = InlineKeyboardMarkup(
         [
             [
