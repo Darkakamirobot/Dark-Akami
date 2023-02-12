@@ -15,7 +15,7 @@ async def msg(event):
     try:
         a = country.info()
     except:
-        await event.reply("Country Not Available Currently")
+        await event.reply("País No disponible actualmente")
     name = a.get("name")
     bb = a.get("altSpellings")
     hu = ""
@@ -75,29 +75,29 @@ async def msg(event):
 
     wiki = a.get("wiki")
 
-    caption = f"""<b><u>Information Gathered Successfully</b></u>
+    caption = f"""<b><u>Información recopilada con éxito</b></u>
 
-<b>Country Name :</b> {name}
-<b>Alternative Spellings :</b> {hu}
-<b>Country Area :</b> {area} square kilometers
-<b>Borders :</b> {borders}
-<b>Calling Codes :</b> {call}
-<b>Country's Capital :</b> {capital}
-<b>Country's currency :</b> {currencies}
-<b>Country's Flag :</b> {okie}
-<b>Demonym :</b> {HmM}
-<b>Country Type :</b> {EsCoBaR}
-<b>ISO Names :</b> {iso}
-<b>Languages :</b> {lMAO}
-<b>Native Name :</b> {nonive}
-<b>Population :</b> {waste}
-<b>Region :</b> {reg}
-<b>Sub Region :</b> {sub}
-<b>Time Zones :</b> {tom}
-<b>Top Level Domain :</b> {lanester}
+<b>Nombre del país :</b> {name}
+<b>Nombres alternativos :</b> {hu}
+<b>Área del país :</b> {area} square kilometers
+<b>Fronteras :</b> {borders}
+<b>Códigos de llamadas :</b> {call}
+<b>Capital del país :</b> {capital}
+<b>Moneda del pais :</b> {currencies}
+<b>Bandera del país :</b> {okie}
+<b>Gentilicio :</b> {HmM}
+<b>Tipo de país :</b> {EsCoBaR}
+<b>Nombres ISO :</b> {iso}
+<b>Idiomas :</b> {lMAO}
+<b>Nombre nativo :</b> {nonive}
+<b>Población :</b> {waste}
+<b>Región :</b> {reg}
+<b>Sub Región :</b> {sub}
+<b>Zonas horarias :</b> {tom}
+<b>Dominio de nivel superior :</b> {lanester}
 <b>Wikipedia :</b> {wiki}
 
-<u>Information Gathered By {BOT_NAME}</u>
+<u>Información recopilada por {BOT_NAME}</u>
 """
 
     await telethn.send_message(
@@ -111,7 +111,7 @@ async def msg(event):
 __help__ = """
 Daré información sobre un país.
 
- ❍ /country <country name>*:* Recopilación de información sobre un país dado.
+ ❍ /country <nombre del país>*:* Recopilación de información sobre un país dado.
 """
 
 __mod_name__ = "Cᴏᴜɴᴛʀʏ"
