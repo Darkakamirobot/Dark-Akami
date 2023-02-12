@@ -78,8 +78,11 @@ async def _(event):
 __help__ = """
  ❍ /define <texto>*:* Escriba la palabra o expresión que desea buscar\nPor ejemplo /define kill
  ❍ /spell*:* al responder a un mensaje, responderá con una versión con corrección gramatical
- ❍ /synonyms <word>*:* Encuentra los sinónimos de una palabra.
- ❍ /antonyms <word>*:* Encuentra los sinónimos de una palabra.
+ ❍ /synonyms <palabra>*:* Encuentra los sinónimos de una palabra.
+ ❍ /antonyms <palabra>*:* Encuentra los sinónimos de una palabra.
+ 
+ *Nota*
+ Módulo creado para encontrar resultados en inglés.
 """
 
 __mod_name__ = "Eɴɢʟɪsʜ"
