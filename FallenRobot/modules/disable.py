@@ -143,14 +143,14 @@ if is_module_loaded(FILENAME):
             if disable_cmd in set(DISABLE_CMDS + DISABLE_OTHER):
                 sql.disable_command(chat.id, str(disable_cmd).lower())
                 update.effective_message.reply_text(
-                    f"Disabled the use of `{disable_cmd}`",
+                    f"Deshabilitado el uso de `{disable_cmd}`",
                     parse_mode=ParseMode.MARKDOWN,
                 )
             else:
-                update.effective_message.reply_text("That command can't be disabled")
+                update.effective_message.reply_text("Ese comando no se puede deshabilitar")
 
         else:
-            update.effective_message.reply_text("What should I disable?")
+            update.effective_message.reply_text("¿Qué debo desactivar?")
 
     @run_async
     @connection_status
@@ -164,14 +164,14 @@ if is_module_loaded(FILENAME):
             try:
                 module = importlib.import_module(disable_module)
             except:
-                update.effective_message.reply_text("Does that module even exist?")
+                update.effective_message.reply_text("¿Existe ese módulo?")
                 return
 
             try:
                 command_list = module.__command_list__
             except:
                 update.effective_message.reply_text(
-                    "Module does not contain command list!"
+                    "El módulo no contiene la lista de comandos!"
                 )
                 return
 
@@ -191,19 +191,19 @@ if is_module_loaded(FILENAME):
             if disabled_cmds:
                 disabled_cmds_string = ", ".join(disabled_cmds)
                 update.effective_message.reply_text(
-                    f"Disabled the uses of `{disabled_cmds_string}`",
+                    f"Deshabilitado los usos de `{disabled_cmds_string}`",
                     parse_mode=ParseMode.MARKDOWN,
                 )
 
             if failed_disabled_cmds:
                 failed_disabled_cmds_string = ", ".join(failed_disabled_cmds)
                 update.effective_message.reply_text(
-                    f"Commands `{failed_disabled_cmds_string}` can't be disabled",
+                    f"Los comandos `{failed_disabled_cmds_string}` no se puede deshabilitar.",
                     parse_mode=ParseMode.MARKDOWN,
                 )
 
         else:
-            update.effective_message.reply_text("What should I disable?")
+            update.effective_message.reply_text("¿Qué debo desactivar?")
 
     @run_async
     @connection_status
@@ -218,13 +218,13 @@ if is_module_loaded(FILENAME):
 
             if sql.enable_command(chat.id, enable_cmd):
                 update.effective_message.reply_text(
-                    f"Enabled the use of `{enable_cmd}`", parse_mode=ParseMode.MARKDOWN
+                    f"Habilitó el uso de `{enable_cmd}`", parse_mode=ParseMode.MARKDOWN
                 )
             else:
-                update.effective_message.reply_text("Is that even disabled?")
+                update.effective_message.reply_text("¿Está eso incluso deshabilitado?")
 
         else:
-            update.effective_message.reply_text("What should I enable?")
+            update.effective_message.reply_text("¿Qué debo habilitar?")
 
     @run_async
     @connection_status
@@ -239,14 +239,14 @@ if is_module_loaded(FILENAME):
             try:
                 module = importlib.import_module(enable_module)
             except:
-                update.effective_message.reply_text("Does that module even exist?")
+                update.effective_message.reply_text("¿Existe ese módulo?")
                 return
 
             try:
                 command_list = module.__command_list__
             except:
                 update.effective_message.reply_text(
-                    "Module does not contain command list!"
+                    "El módulo no contiene la lista de comandos!"
                 )
                 return
 
@@ -265,19 +265,19 @@ if is_module_loaded(FILENAME):
             if enabled_cmds:
                 enabled_cmds_string = ", ".join(enabled_cmds)
                 update.effective_message.reply_text(
-                    f"Enabled the uses of `{enabled_cmds_string}`",
+                    f"habilitó los usos de `{enabled_cmds_string}`",
                     parse_mode=ParseMode.MARKDOWN,
                 )
 
             if failed_enabled_cmds:
                 failed_enabled_cmds_string = ", ".join(failed_enabled_cmds)
                 update.effective_message.reply_text(
-                    f"Are the commands `{failed_enabled_cmds_string}` even disabled?",
+                    f"¿Están los comandos `{failed_enabled_cmds_string}` incluso deshabilitados?",
                     parse_mode=ParseMode.MARKDOWN,
                 )
 
         else:
-            update.effective_message.reply_text("What should I enable?")
+            update.effective_message.reply_text("¿Qué debo habilitar?")
 
     @run_async
     @connection_status
@@ -288,22 +288,22 @@ if is_module_loaded(FILENAME):
             for cmd in set(DISABLE_CMDS + DISABLE_OTHER):
                 result += f" - `{escape_markdown(cmd)}`\n"
             update.effective_message.reply_text(
-                f"The following commands are toggleable:\n{result}",
+                f"Los siguientes comandos son conmutables:\n{result}",
                 parse_mode=ParseMode.MARKDOWN,
             )
         else:
-            update.effective_message.reply_text("No commands can be disabled.")
+            update.effective_message.reply_text("No se pueden deshabilitar comandos.")
 
     # do not async
     def build_curr_disabled(chat_id: Union[str, int]) -> str:
         disabled = sql.get_all_disabled(chat_id)
         if not disabled:
-            return "No commands are disabled!"
+            return "No hay comandos deshabilitados!"
 
         result = ""
         for cmd in disabled:
             result += " - `{}`\n".format(escape_markdown(cmd))
-        return "The following commands are currently restricted:\n{}".format(result)
+        return "Los siguientes comandos están actualmente restringidos:\n{}".format(result)
 
     @run_async
     @connection_status
@@ -314,7 +314,7 @@ if is_module_loaded(FILENAME):
         )
 
     def __stats__():
-        return f"• {sql.num_disabled()} disabled items, across {sql.num_chats()} chats."
+        return f"• {sql.num_disabled()} elementos deshabilitados, a través {sql.num_chats()} chats."
 
     def __migrate__(old_chat_id, new_chat_id):
         sql.migrate_chat(old_chat_id, new_chat_id)
@@ -337,13 +337,13 @@ if is_module_loaded(FILENAME):
     dispatcher.add_handler(TOGGLE_HANDLER)
 
     __help__ = """
-    ❍ /cmds*:* comprobar el estado actual de los comandos deshabilitados.
+    ❍ /cmds*:* Comprobar el estado actual de los comandos deshabilitados.
 
-    *Admins only:*
-    ❍ /enable <cmd name>*:* Habilita ese comando.
-    ❍ /disable <cmd name>*:* Desabilita ese comando.
-    ❍ /enablemodule <module name>*:* Habilita todos los comandos en ese módulo.
-    ❍ /disablemodule <module name>*:* Desactiva todos los comandos en ese módulo.
+    *Sólo administradores:*
+    ❍ /enable <cmd nombre>*:* Habilita ese comando.
+    ❍ /disable <cmd nombre>*:* Desabilita ese comando.
+    ❍ /enablemodule <nombre del módulo>*:* Habilita todos los comandos en ese módulo.
+    ❍ /disablemodule <nombre del módulo>*:* Desactiva todos los comandos en ese módulo.
     ❍ /listcmds*:* Enumera todos los comandos alternables posibles.
     """
 
