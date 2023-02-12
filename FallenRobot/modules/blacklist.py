@@ -61,7 +61,7 @@ def blacklist(update, context):
         ):
             send_message(
                 update.effective_message,
-                "No blacklisted words in <b>{}</b>!".format(html.escape(chat_name)),
+                "No hay palabras en la lista negra en <b>{}</b>!".format(html.escape(chat_name)),
                 parse_mode=ParseMode.HTML,
             )
             return
@@ -99,7 +99,7 @@ def add_blacklist(update, context):
         if len(to_blacklist) == 1:
             send_message(
                 update.effective_message,
-                "Added blacklist <code>{}</code> in chat: <b>{}</b>!".format(
+                "Se agregó la lista negra <code>{}</code> en el chat: <b>{}</b>!".format(
                     html.escape(to_blacklist[0]), html.escape(chat_name)
                 ),
                 parse_mode=ParseMode.HTML,
@@ -108,7 +108,7 @@ def add_blacklist(update, context):
         else:
             send_message(
                 update.effective_message,
-                "Added blacklist trigger: <code>{}</code> in <b>{}</b>!".format(
+                "Activador de lista negra agregado: <code>{}</code> en <b>{}</b>!".format(
                     len(to_blacklist), html.escape(chat_name)
                 ),
                 parse_mode=ParseMode.HTML,
