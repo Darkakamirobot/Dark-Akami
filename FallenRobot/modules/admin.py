@@ -768,8 +768,6 @@ def pinned(update: Update, context: CallbackContext) -> str:
         )
 
 
-    
-
 @run_async
 @bot_admin
 @user_admin
