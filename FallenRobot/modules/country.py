@@ -112,6 +112,9 @@ __help__ = """
 Daré información sobre un país.
 
  ❍ /country <nombre del país>*:* Recopilación de información sobre un país dado.
+ 
+ *Nota*
+ Ponga el nombre del país en inglés.
 """
 
 __mod_name__ = "Cᴏᴜɴᴛʀʏ"
