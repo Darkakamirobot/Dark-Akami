@@ -96,8 +96,8 @@ def fallen(update: Update, context: CallbackContext):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="ᴇɴᴀʙʟᴇ", callback_data="add_chat({})"),
-                InlineKeyboardButton(text="ᴅɪsᴀʙʟᴇ", callback_data="rm_chat({})"),
+                InlineKeyboardButton(text="ʜᴀʙɪʟɪᴛᴀʀ", callback_data="add_chat({})"),
+                InlineKeyboardButton(text="ᴅᴇsʜᴀʙɪʟɪᴛᴀʀ", callback_data="rm_chat({})"),
             ],
         ]
     )
