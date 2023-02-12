@@ -269,7 +269,7 @@ def kick(update: Update, context: CallbackContext) -> str:
         # bot.send_sticker(chat.id, BAN_STICKER)  # banhammer marie sticker
         bot.sendMessage(
             chat.id,
-            f"One Kicked! {mention_html(member.user.id, html.escape(member.user.first_name))}.",
+            f"Pateado! {mention_html(member.user.id, html.escape(member.user.first_name))}.",
             parse_mode=ParseMode.HTML,
         )
         log = (
@@ -279,7 +279,7 @@ def kick(update: Update, context: CallbackContext) -> str:
             f"<b>ᴜsᴜᴀʀɪᴏ:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}"
         )
         if reason:
-            log += f"\n<b>ʀᴇᴀsᴏɴ:</b> {reason}"
+            log += f"\n<b>ʀᴀᴢᴏɴ:</b> {reason}"
 
         return log
 
