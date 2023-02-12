@@ -745,7 +745,7 @@ def pinned(update: Update, context: CallbackContext) -> str:
             message_link = f"https://t.me/c/{link_chat_id}/{pinned_id}"
 
         msg.reply_text(
-            f"Fijado en {html.escape(chat.title)}.",
+            f"ᴩɪɴɴᴇᴅ ᴏɴ {html.escape(chat.title)}.",
             reply_to_message_id=msg_id,
             parse_mode=ParseMode.HTML,
             disable_web_page_preview=True,
@@ -753,7 +753,7 @@ def pinned(update: Update, context: CallbackContext) -> str:
                 [
                     [
                         InlineKeyboardButton(
-                            text="Mensaje",
+                            text="ᴍᴇssᴀɢᴇ",
                             url=f"https://t.me/{link_chat_id}/{pinned_id}",
                         )
                     ]
@@ -763,10 +763,12 @@ def pinned(update: Update, context: CallbackContext) -> str:
 
     else:
         msg.reply_text(
-            f"» No hay ningún mensaje fijado en <b>{html.escape(chat.title)}!</b>",
+            f"» ᴛʜᴇʀᴇ's ɴᴏ ᴩɪɴɴᴇᴅ ᴍᴇssᴀɢᴇ ɪɴ <b>{html.escape(chat.title)}!</b>",
             parse_mode=ParseMode.HTML,
         )
 
+
+    
 
 @run_async
 @bot_admin
