@@ -106,6 +106,7 @@ HELP_STRINGS = f"""
 
 ➲ /start : Iɴɪᴄɪᴀᴍᴇ | Sᴇɢᴜɴ ʏᴏ ʏᴀ ʟᴏ ʜɪᴄɪsᴛᴇ ✓
 ➲ /help  : Sᴇᴄᴄɪᴏɴ ᴅᴇ ᴄᴏᴍᴀɴᴅᴏs ᴅɪsᴘᴏɴɪʙʟᴇs. 
+
   ‣ Eɴ Pʀɪᴠᴀᴅᴏ :  Lᴇ ᴇɴᴠɪᴀʀᴇᴍᴏs ᴀʏᴜᴅᴀ ᴘᴀʀᴀ ᴛᴏᴅᴏs ʟᴏs ᴍᴏᴅᴜʟᴏs ᴄᴏᴍᴘᴀᴛɪʙʟᴇs.
   ‣ Eɴ ɢʀᴜᴘᴏ : Tᴇ ʀᴇᴅɪʀɪɢɪʀᴀ ᴀʟ ᴘʀɪᴠᴀᴅᴏ, ᴄᴏɴ ᴛᴏᴅᴏs ʟᴏs ᴍᴏᴅᴜʟᴏs ᴅᴇ ᴀʏᴜᴅᴀ."""
 
@@ -496,12 +497,12 @@ def get_help(update: Update, context: CallbackContext):
             )
             return
         update.effective_message.reply_text(
-            "» ᴄʜᴏᴏsᴇ ᴀɴ ᴏᴩᴛɪᴏɴ ғᴏʀ ɢᴇᴛᴛɪɴɢ ʜᴇʟᴩ.",
+            "» ᴇʟɪɢᴇ ᴜɴᴀ ᴏᴘᴄɪᴏɴ ᴘᴀʀᴀ ᴏʙᴛᴇɴᴇʀ ᴀʏᴜᴅᴀ.",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="ᴏᴩᴇɴ ɪɴ ᴩʀɪᴠᴀᴛᴇ",
+                            text="ᴀʙʀɪʀ ᴇɴ ᴇʟ ᴘʀɪᴠᴀᴅᴏ",
                             url="https://t.me/{}?start=help".format(
                                 context.bot.username
                             ),
@@ -509,7 +510,7 @@ def get_help(update: Update, context: CallbackContext):
                     ],
                     [
                         InlineKeyboardButton(
-                            text="ᴏᴩᴇɴ ʜᴇʀᴇ",
+                            text="ᴀʙʀɪʀ ᴀǫᴜɪ",
                             callback_data="help_back",
                         )
                     ],
