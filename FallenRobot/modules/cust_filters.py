@@ -378,7 +378,7 @@ def reply_filter(update, context):
                         )
                     except BadRequest as excp:
                         error_catch = get_exception(excp, filt, chat)
-                        if error_catch == "noreply":
+                        if error_catch == "Ninguna respuesta":
                             try:
                                 context.bot.send_message(
                                     chat.id,
@@ -543,21 +543,21 @@ def rmall_callback(update, context):
             for i in filterlist:
                 sql.remove_filter(chat.id, i)
 
-            msg.edit_text(f"Cleaned {count} filters in {chat.title}")
+            msg.edit_text(f"Limpiado {count} filters en {chat.title}")
 
         if member.status == "administrator":
-            query.answer("Only owner of the chat can do this.")
+            query.answer("Solo el dueño del chat puede hacer esto.")
 
         if member.status == "member":
-            query.answer("You need to be admin to do this.")
+            query.answer("Necesitas ser administrador para hacer esto.")
     elif query.data == "filters_cancel":
         if member.status == "creator" or query.from_user.id in DRAGONS:
-            msg.edit_text("Clearing of all filters has been cancelled.")
+            msg.edit_text("Se ha cancelado la limpieza de todos los filters.")
             return
         if member.status == "administrator":
-            query.answer("Only owner of the chat can do this.")
+            query.answer("Solo el dueño del chat puede hacer esto.")
         if member.status == "member":
-            query.answer("You need to be admin to do this.")
+            query.answer("Necesitas ser administrador para hacer esto.")
 
 
 # NOT ASYNC NOT A HANDLER
