@@ -1048,8 +1048,8 @@ def __chat_settings__(chat_id, user_id):
     welcome_pref = sql.get_welc_pref(chat_id)[0]
     goodbye_pref = sql.get_gdbye_pref(chat_id)[0]
     return (
-        "This chat has it's welcome preference set to `{}`.\n"
-        "It's goodbye preference is `{}`.".format(welcome_pref, goodbye_pref)
+        "Este chat tiene su preferencia de bienvenida establecida en `{}`.\n"
+        "Su preferencia de despedida es `{}`.".format(welcome_pref, goodbye_pref)
     )
 
 
