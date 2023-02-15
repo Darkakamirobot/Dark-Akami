@@ -27,10 +27,10 @@ GIFS = [
 
 SLAP_FALLEN_TEMPLATES = (
     "Abofetéame una vez más y te silenciaré.",
-    "Deja de abofetearme. Ahhhhhhh.",
+    "Deja de abofetearme 😡",
     [
         "Te estoy silenciando por un minuto.",  # normal reply
-        "Deja de abofetearme, solo porque no puedo silenciarte. Aaaaaaaah.",  # reply to admin
+        "Deja de abofetearme, solo porque no puedo silenciarte 😡",  # reply to admin
         "tmute",  # command
         "Callate la boca!",
         "Silencio!",
@@ -38,24 +38,24 @@ SLAP_FALLEN_TEMPLATES = (
 )
 
 SLAP_TEMPLATES = (
-    "{user2} was killed by magic.",
-    "{user2} starved without pats.",
-    "{user2} was knocked into the void by {user1}.",
-    "{user2} fainted.",
-    "{user2} is out of usable Pokemon! {user2} whited out!.",
-    "{user2} is out of usable Pokemon! {user2} blacked out!.",
+    "{user2} fue asesinad@ por magia.",
+    "{user2} está hambrient@ sin palmaditas.",
+    "{user2} fue arrojado al vacío por {user1}.",
+    "{user2} se desmayó.",
+    "{user2} se ha quedado sin pokemon utilizables! {user2} Se desmayó!",
+    "{user2} se ha quedado sin Pokémon utilizables! {user2} Se desmayó!",
     "{user2} got rekt.",
-    "{user2}'s melon was split by {user1}.",
-    "{user2} was sliced and diced by {user1}.",
-    "{user2} played hot-potato with a grenade.",
-    "{user2} was knifed by {user1}.",
-    "{user2} ate a grenade.",
-    "{user2} is what's for dinner!",
-    "{user2} was terminated by {user1}.",
-    "{user1} spammed {user2}'s email.",
-    "{user1} RSA-encrypted {user2} and deleted the private key.",
-    "{user1} put {user2} in the friendzone.",
-    "{user1} slaps {user2} with a DMCA takedown request!",
+    "La cabeza de {user2} fue divida en 2 por {user1}.",
+    "{user2} Fue cortad@ y repartid@ en cubitos por {user1}.",
+    "{user2} juega cod de una manera manca 🤬.",
+    "{user2} Fue apuñalado por {user1}.",
+    "{user2} comió una granada.",
+    "{user2} es lo que hay para cenar!",
+    "{user2} fue rescindido por {user1}.",
+    "{user1} spammeó a {user2} con Noporn.",
+    "{user1} hackeó el instagram de {user2} ahora está expuest@!!",
+    "{user1} puso {user2} en la friendzone.",
+    "{user1} golpeó a {user2} con una cuchara!",
     "{user2} got a house call from Doctor {user1}.",
     "{user1} beheaded {user2}.",
     "{user2} got stoned...by an angry mob.",
