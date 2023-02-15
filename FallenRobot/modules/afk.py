@@ -33,7 +33,7 @@ def afk(update: Update, context: CallbackContext):
         reason = args[1]
         if len(reason) > 100:
             reason = reason[:100]
-            notice = "\nYour afk reason was shortened to 100 characters."
+            notice = "\nSu razón afk se acortó a 100 caracteres."
     else:
         reason = ""
 
@@ -63,11 +63,11 @@ def no_longer_afk(update: Update, context: CallbackContext):
                 "{} aqui estás de vuelta echando ganas a una vida que ni querías 😒!",
                 "{} ha llegado!? Físicamente mal, mentalmente peor y ni hablar de tu estado económico 😭!",
                 "{} estás de vuelta! Lo que hicimos anoche! uff 🔥!",
-                "{} is awake!",
+                "{} esta despiert@!",
                 "{} mi esclavo está en linea de nuevo ¿Dondé te has metido? 😡!",
                 "{} volvió de comprar los cigarrillos, a diferencia de tú papá que se fue y ya no volvió! 😊 ",
-                "Welcome back! {}",
-                "Where is {}?\nIn the chat!",
+                "Bienvenido de nuevo! {}",
+                "¿Dónde está {}?\nEn el chat!",
             ]
             chosen_option = random.choice(options)
             update.effective_message.reply_text(chosen_option.format(firstname))
