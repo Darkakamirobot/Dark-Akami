@@ -1,22 +1,22 @@
 RUN_STRINGS = (
-    "Now you see me, now you don't." "ε=ε=ε=ε=┌(;￣▽￣)┘",
-    "Get back here!",
-    "REEEEEEEEEEEEEEEEEE!!!!!!!",
-    "Look out for the wall!",
-    "Don't leave me alone with them!!",
-    "You've got company!",
+    "Ahora me ves, ahora no." "ε=ε=ε=ε=┌(;￣▽￣)┘",
+    "Regresa aquí!",
+    "GAAAAAAAAAAAAAAAA!!!!!!!",
+    "Cuidado con la pared!",
+    "No me dejes solo con ellos!!",
+    "Tienes compañía!",
     "Chotto matte!",
     "Yare yare daze",
     "*Naruto run activated*",
     "*Nezuko run activated*",
-    "Hey take responsibilty for what you just did!",
-    "May the odds be ever in your favour.",
-    "Run everyone, they just dropped a bomb 💣💣",
-    "And they disappeared forever, never to be seen again.",
-    "Legend has it, they're still running.",
+    "Oye, hazte responsable de lo que acabas de hacer.!",
+    "Que las probabilidades estén siempre a tu favor.",
+    "Corre a todos, acaban de lanzar una bomba 💣💣",
+    "Y ellos desaparecieron para siempre, para nunca más ser vistos.",
+    "La leyenda lo tiene, todavía están corriendo.",
     "Hasta la vista, baby.",
-    "Ah, what a waste. I liked that one.",
-    "As The Doctor would say... RUN!",
+    "Ah, qué desperdicio. me gusto ese.",
+    "Como diría el Doctor ... CORRE!",
 )
 
 GIFS = [
@@ -26,14 +26,14 @@ GIFS = [
 ]
 
 SLAP_FALLEN_TEMPLATES = (
-    "Slap me one more time and I'll mute you.",
-    "Stop slapping me. REEEEEEEEEEEEEE.",
+    "Abofetéame una vez más y te silenciaré.",
+    "Deja de abofetearme. Ahhhhhhh.",
     [
-        "I am muting you for a minute.",  # normal reply
-        "Stop slapping me just because I can't mute you. REEEEEEEEEE.",  # reply to admin
+        "Te estoy silenciando por un minuto.",  # normal reply
+        "Deja de abofetearme, solo porque no puedo silenciarte. Aaaaaaaah.",  # reply to admin
         "tmute",  # command
-        "Shut up!",
-        "Silence!",
+        "Callate la boca!",
+        "Silencio!",
     ],
 )
 
