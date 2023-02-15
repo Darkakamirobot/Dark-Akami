@@ -11,7 +11,7 @@ RUN_STRINGS = (
     "*Nezuko run activated*",
     "Oye, hazte responsable de lo que acabas de hacer.!",
     "Que las probabilidades estén siempre a tu favor.",
-    "Corre a todos, acaban de lanzar una bomba 💣💣",
+    "Corran todos, acaban de lanzar una bomba 💣💣",
     "Y ellos desaparecieron para siempre, para nunca más ser vistos.",
     "La leyenda lo tiene, todavía están corriendo.",
     "Hasta la vista, baby.",
