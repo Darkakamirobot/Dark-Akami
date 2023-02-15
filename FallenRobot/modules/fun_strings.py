@@ -204,7 +204,7 @@ ITEMS = (
     "libro",
     "laptop",
     "pollo de goma",
-    "murciélago con púas,
+    "murciélago con púas",
     "rock pesado",
     "trozo de tierra",
     "tonelada de ladrillos",
