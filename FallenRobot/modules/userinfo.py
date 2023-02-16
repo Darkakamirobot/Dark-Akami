@@ -150,12 +150,12 @@ def get_id(update: Update, context: CallbackContext):
     else:
         if chat.type == "private":
             msg.reply_text(
-                f"ʏᴏᴜʀ ᴜsᴇʀ ɪᴅ ɪs <code>{chat.id}</code>.", parse_mode=ParseMode.HTML
+                f"sᴜ ᴜsᴜᴀʀɪᴏ ɪᴅ ᴇs <code>{chat.id}</code>.", parse_mode=ParseMode.HTML
             )
 
         else:
             msg.reply_text(
-                f"ᴛʜɪs ɢʀᴏᴜᴩ's ɪᴅ ɪs <code>{chat.id}</code>.", parse_mode=ParseMode.HTML
+                f"ᴇʟ ɪᴅ ᴅᴇ ᴇsᴛᴇ ɢʀᴜᴘᴏ ᴇs <code>{chat.id}</code>.", parse_mode=ParseMode.HTML
             )
 
 
@@ -174,26 +174,26 @@ async def group_info(event) -> None:
         ch_full = await event.client(GetFullChannelRequest(channel=entity))
     except:
         await event.reply(
-            "Can't for some reason, maybe it is a private one or that I am banned there."
+            "No puedo por alguna razón, tal vez sea privada o que estoy baneado allí."
         )
         return
     msg = f"**ɪᴅ**: `{entity.id}`"
-    msg += f"\n**ᴛɪᴛʟᴇ**: `{entity.title}`"
+    msg += f"\n**ᴛɪᴛᴜʟᴏ**: `{entity.title}`"
     msg += f"\n**ᴅᴄ**: `{entity.photo.dc_id}`"
     msg += f"\n**ᴠɪᴅᴇᴏ ᴩғᴩ**: `{entity.photo.has_video}`"
-    msg += f"\n**sᴜᴩᴇʀɢʀᴏᴜᴩ**: `{entity.megagroup}`"
-    msg += f"\n**ʀᴇsᴛʀɪᴄᴛᴇᴅ**: `{entity.restricted}`"
+    msg += f"\n**sᴜᴘᴇʀɢʀᴜᴘᴏ**: `{entity.megagroup}`"
+    msg += f"\n**ʀᴇsᴛʀɪɴɢɪᴅᴏ**: `{entity.restricted}`"
     msg += f"\n**sᴄᴀᴍ**: `{entity.scam}`"
-    msg += f"\n**sʟᴏᴡᴍᴏᴅᴇ**: `{entity.slowmode_enabled}`"
+    msg += f"\n**ᴍᴏᴅᴏ ʟᴇɴᴛᴏ**: `{entity.slowmode_enabled}`"
     if entity.username:
-        msg += f"\n**ᴜsᴇʀɴᴀᴍᴇ**: {entity.username}"
-    msg += "\n\n**ᴍᴇᴍʙᴇʀ sᴛᴀᴛs:**"
-    msg += f"\nᴀᴅᴍɪɴs: `{len(totallist)}`"
-    msg += f"\nᴜsᴇʀs: `{totallist.total}`"
-    msg += "\n\n**ᴀᴅᴍɪɴs ʟɪsᴛ:**"
+        msg += f"\n**ɴᴏᴍʙʀᴇ ᴅᴇ ᴜsᴜᴀʀɪᴏ**: {entity.username}"
+    msg += "\n\n**ᴇsᴛᴀᴅɪsᴛɪᴄᴀs ᴅᴇ ᴍɪᴇᴍʙʀᴏs:**"
+    msg += f"\nᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀᴇs: `{len(totallist)}`"
+    msg += f"\nᴜsᴜᴀʀɪᴏs: `{totallist.total}`"
+    msg += "\n\n**ɪsᴛᴀ ᴅᴇ ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀᴇs:**"
     for x in totallist:
         msg += f"\n• [{x.id}](tg://user?id={x.id})"
-    msg += f"\n\n**ᴅᴇsᴄʀɪᴩᴛɪᴏɴ**:\n`{ch_full.full_chat.about}`"
+    msg += f"\n\n**ᴅᴇsᴄʀɪᴘᴄɪᴏɴ**:\n`{ch_full.full_chat.about}`"
     await event.reply(msg)
 
 
