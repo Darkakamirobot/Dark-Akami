@@ -27,16 +27,16 @@ async def _(event):
             ),
         )
         await event.reply(
-            "Open with: [🌏Google Maps]({})".format(gm),
+            "Abierto con: [🌏Google Maps]({})".format(gm),
             link_preview=False,
         )
     except Exception as e:
         print(e)
-        await event.reply("I can't find that")
+        await event.reply("no puedo encontrar eso")
 
 
 __help__ = """
-Le envía la ubicación gps de la consulta dada...
+Te envio la ubicación gps de la consulta dada...
 
  ❍ /gps <localización>*:* Obten ubicación gps.
 """
