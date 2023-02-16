@@ -206,7 +206,7 @@ def gifid(update: Update, context: CallbackContext):
             parse_mode=ParseMode.HTML,
         )
     else:
-        update.effective_message.reply_text("Please reply to a gif to get its ID.")
+        update.effective_message.reply_text("Responda a un gif para obtener su ID.")
 
 
 @run_async
@@ -231,7 +231,7 @@ def info(update: Update, context: CallbackContext):
             and not message.parse_entities([MessageEntity.TEXT_MENTION])
         )
     ):
-        message.reply_text("I can't extract a user from this.")
+        message.reply_text("No puedo extraer un usuario de esto.")
         return
 
     else:
@@ -241,15 +241,15 @@ def info(update: Update, context: CallbackContext):
 
     text = (
         f"ㅤ ㅤㅤ      ✦ ᴜsᴇʀ ɪɴғᴏ ✦\n•❅─────✧❅✦❅✧─────❅•\n"
-        f"➻ <b>ᴜsᴇʀ ɪᴅ:</b> <code>{user.id}</code>\n"
-        f"➻ <b>ғɪʀsᴛ ɴᴀᴍᴇ:</b> {html.escape(user.first_name)}"
+        f"➻ <b>ᴜsᴜᴀʀɪᴏ ɪᴅ:</b> <code>{user.id}</code>\n"
+        f"➻ <b>ᴘʀɪᴍᴇʀ ɴᴏᴍʙʀᴇ:</b> {html.escape(user.first_name)}"
     )
 
     if user.last_name:
-        text += f"\n➻ <b>ʟᴀsᴛ ɴᴀᴍᴇ:</b> {html.escape(user.last_name)}"
+        text += f"\n➻ <b>ᴀᴘᴇʟʟɪᴅᴏ:</b> {html.escape(user.last_name)}"
 
     if user.username:
-        text += f"\n➻ <b>ᴜsᴇʀɴᴀᴍᴇ:</b> @{html.escape(user.username)}"
+        text += f"\n➻ <b>ɴᴏᴍʙʀᴇ ᴅᴇ ᴜsᴜᴀʀɪᴏ:</b> @{html.escape(user.username)}"
 
     text += f"\n➻ <b>ʟɪɴᴋ:</b> {mention_html(user.id, 'link')}"
 
@@ -262,39 +262,39 @@ def info(update: Update, context: CallbackContext):
         else:
             status = status = bot.get_chat_member(chat.id, user.id).status
             if status:
-                if status in {"left", "kicked"}:
-                    text += _stext.format("ɴᴏᴛ ʜᴇʀᴇ")
-                elif status == "member":
-                    text += _stext.format("ᴅᴇᴛᴇᴄᴛᴇᴅ")
-                elif status in {"administrator", "creator"}:
-                    text += _stext.format("ᴀᴅᴍɪɴ")
+                if status in {"ido", "pateado"}:
+                    text += _stext.format("ᴀǫᴜɪ ɴᴏ")
+                elif status == "miembro":
+                    text += _stext.format("ᴅᴇᴛᴇᴄᴛᴀᴅᴏ")
+                elif status in {"administrador", "creador"}:
+                    text += _stext.format("ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀ")
     if user_id not in [bot.id, 777000, 1087968824]:
         userhp = hpmanager(user)
         text += f"\n\n<b>ʜᴇᴀʟᴛʜ:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]"
 
     if user.id == OWNER_ID:
-        text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs <b>ɢᴏᴅ</b>.\n"
+        text += "\n\nᴇʟ ɴɪᴠᴇʟ ᴅᴇ ᴅᴇsᴀsᴛʀᴇ ᴅᴇ ᴇsᴛᴇ ᴜsᴜᴀʀɪᴏ ᴇs <b>ɢᴏᴅ</b>.\n"
     elif user.id in DEV_USERS:
-        text += "\n\nᴛʜɪs ᴜsᴇʀ ɪs ᴀ ᴍᴇᴍʙᴇʀ ᴏғ <b>ᴀɴᴏɴ ᴀssᴏᴄɪᴀᴛɪᴏɴ</b>.\n"
+        text += "\n\nᴇsᴛᴇ ᴜsᴜᴀʀɪᴏ ᴇs ᴍɪᴇᴍʙʀᴏ ᴅᴇ <b>ᴀsᴏsɪᴀᴄɪᴏɴ ᴅᴀʀᴋ</b>.\n"
     elif user.id in DRAGONS:
-        text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs <b>ᴅʀᴀɢᴏɴ</b>.\n"
+        text += "\n\nᴇʟ ɴɪᴠᴇʟ ᴅᴇ ᴅᴇsᴀsᴛʀᴇ ᴅᴇ ᴇsᴛᴇ ᴜsᴜᴀʀɪᴏ ᴇs <b>ᴅʀᴀɢᴏɴ</b>.\n"
     elif user.id in DEMONS:
-        text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs <b>ᴅᴇᴍᴏɴ</b>.\n"
+        text += "\n\nᴇʟ ɴɪᴠᴇʟ ᴅᴇ ᴅᴇsᴀsᴛʀᴇ ᴅᴇ ᴇsᴛᴇ ᴜsᴜᴀʀɪᴏ ᴇs <b>ᴅᴇᴍᴏɴ</b>.\n"
     elif user.id in TIGERS:
-        text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs <b>ᴛɪɢᴇʀ</b>.\n"
+        text += "\n\nᴇʟ ɴɪᴠᴇʟ ᴅᴇ ᴅᴇsᴀsᴛʀᴇ ᴅᴇ ᴇsᴛᴇ ᴜsᴜᴀʀɪᴏ ᴇs <b>ᴛɪɢᴇʀ</b>.\n"
     elif user.id in WOLVES:
-        text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs <b>ᴡᴏʟғ</b>.\n"
+        text += "\n\nᴇʟ ɴɪᴠᴇʟ ᴅᴇ ᴅᴇsᴀsᴛʀᴇ ᴅᴇ ᴇsᴛᴇ ᴜsᴜᴀʀɪᴏ ᴇs <b>ᴡᴏʟғ</b>.\n"
 
     try:
         user_member = chat.get_member(user.id)
-        if user_member.status == "administrator":
+        if user_member.status == "administrador":
             result = requests.post(
                 f"https://api.telegram.org/bot{TOKEN}/getChatMember?chat_id={chat.id}&user_id={user.id}"
             )
             result = result.json()["result"]
             if "custom_title" in result.keys():
                 custom_title = result["custom_title"]
-                text += f"\n\nᴛɪᴛʟᴇ:\n<b>{custom_title}</b>"
+                text += f"\n\nᴛɪᴛᴜʟᴏ:\n<b>{custom_title}</b>"
     except BadRequest:
         pass
 
@@ -319,10 +319,10 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "ʜᴇᴀʟᴛʜ", url="https://t.me/FallenAssociation/7"
+                                "sᴀʟᴜᴅ", url="https://t.me/FallenAssociation/7"
                             ),
                             InlineKeyboardButton(
-                                "ᴅɪꜱᴀꜱᴛᴇʀ", url="https://t.me/FallenAssociation/8"
+                                "ᴅᴇsᴀsᴛʀᴇ", url="https://t.me/FallenAssociation/8"
                             ),
                         ],
                     ]
@@ -367,10 +367,10 @@ def about_me(update: Update, context: CallbackContext):
     elif message.reply_to_message:
         username = message.reply_to_message.from_user.first_name
         update.effective_message.reply_text(
-            f"{username} hasn't set an info message about themselves yet!"
+            f"{username} aún no ha establecido un mensaje de información sobre sí mismo!"
         )
     else:
-        update.effective_message.reply_text("There isnt one, use /setme to set one.")
+        update.effective_message.reply_text("No hay uno, usa /setme para establecer uno.")
 
 
 @run_async
@@ -378,7 +378,7 @@ def set_about_me(update: Update, context: CallbackContext):
     message = update.effective_message
     user_id = message.from_user.id
     if user_id in [777000, 1087968824]:
-        message.reply_text("Error! Unauthorized")
+        message.reply_text("Error! No autorizado!")
         return
     bot = context.bot
     if message.reply_to_message:
@@ -392,14 +392,14 @@ def set_about_me(update: Update, context: CallbackContext):
         if len(info[1]) < MAX_MESSAGE_LENGTH // 4:
             sql.set_user_me_info(user_id, info[1])
             if user_id in [777000, 1087968824]:
-                message.reply_text("Authorized...Information updated!")
+                message.reply_text("Autorizado...Información actualizada!")
             elif user_id == bot.id:
-                message.reply_text("I have updated my info with the one you provided!")
+                message.reply_text("He actualizado mi información con la que me proporcionaste!")
             else:
-                message.reply_text("Information updated!")
+                message.reply_text("Información actualizada!")
         else:
             message.reply_text(
-                "The info needs to be under {} characters! You have {}.".format(
+                "¡La información debe estar debajo de {} caracteres! Tienes {}.".format(
                     MAX_MESSAGE_LENGTH // 4, len(info[1])
                 )
             )
@@ -408,7 +408,7 @@ def set_about_me(update: Update, context: CallbackContext):
 @run_async
 @sudo_plus
 def stats(update: Update, context: CallbackContext):
-    stats = "<b>🧐 ᴄᴜʀʀᴇɴᴛ sᴛᴀᴛs:</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
+    stats = "<b>🧐 ᴇsᴛᴀᴅɪsᴛɪᴄᴀs ᴀᴄᴛᴜᴀʟᴇs:</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
     result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
     update.effective_message.reply_text(result, parse_mode=ParseMode.HTML)
 
@@ -435,11 +435,11 @@ def about_bio(update: Update, context: CallbackContext):
     elif message.reply_to_message:
         username = user.first_name
         update.effective_message.reply_text(
-            f"{username} hasn't had a message set about themselves yet!\nSet one using /setbio"
+            f"{username} todavía no ha configurado un mensaje sobre sí mismo!\nEstablezca uno usando /setbio"
         )
     else:
         update.effective_message.reply_text(
-            "You haven't had a bio set about yourself yet!"
+            "Todavía no tienes una biografía sobre ti!"
         )
 
 
@@ -455,17 +455,17 @@ def set_about_bio(update: Update, context: CallbackContext):
 
         if user_id == message.from_user.id:
             message.reply_text(
-                "Ha, you can't set your own bio! You're at the mercy of others here..."
+                "¡Ja, no puedes establecer tu propia biografía! Estás a merced de los demás aquí..."
             )
             return
 
         if user_id in [777000, 1087968824] and sender_id not in DEV_USERS:
-            message.reply_text("You are not authorised")
+            message.reply_text("No estás autorizado")
             return
 
         if user_id == bot.id and sender_id not in DEV_USERS:
             message.reply_text(
-                "Umm... yeah, I only trust Anon Association to set my bio."
+                "Umm... sí, solo confío en la Asociación Dark para configurar mi biografía."
             )
             return
 
@@ -478,16 +478,16 @@ def set_about_bio(update: Update, context: CallbackContext):
             if len(bio[1]) < MAX_MESSAGE_LENGTH // 4:
                 sql.set_user_bio(user_id, bio[1])
                 message.reply_text(
-                    "Updated {}'s bio!".format(repl_message.from_user.first_name)
+                    "Se actualizó la biografía de {} !".format(repl_message.from_user.first_name)
                 )
             else:
                 message.reply_text(
-                    "Bio needs to be under {} characters! You tried to set {}.".format(
+                    "¡La biografía debe estar debajo de {} caracteres! Ha intentado establecer {}.".format(
                         MAX_MESSAGE_LENGTH // 4, len(bio[1])
                     )
                 )
     else:
-        message.reply_text("Reply to someone to set their bio!")
+        message.reply_text("Responde a alguien para configurar su biografía!")
 
 
 def __user_info__(user_id):
@@ -495,35 +495,35 @@ def __user_info__(user_id):
     me = html.escape(sql.get_user_me_info(user_id) or "")
     result = ""
     if me:
-        result += f"<b>ᴀʙᴏᴜᴛ ᴜsᴇʀ:</b>\n{me}\n"
+        result += f"<b>sᴏʙʀᴇ ᴇʟ ᴜsᴜᴀʀɪᴏ:</b>\n{me}\n"
     if bio:
-        result += f"<b>ᴏᴛʜᴇʀs sᴀʏ ᴛʜᴀᴛ:</b>\n{bio}\n"
+        result += f"<b>ᴏᴛʀᴏs ᴅɪᴄᴇɴ ǫᴜᴇ:</b>\n{bio}\n"
     result = result.strip("\n")
     return result
 
 
 __help__ = """
 *ID:*
- ❍ /id*:* get the current group id. If used by replying to a message, gets that user's id.
- ❍ /gifid*:* reply to a gif to me to tell you its file ID.
+ ❍ /id*:* Obten la identificación del grupo actual. Si se usa respondiendo a un mensaje, obtiene la identificación de ese usuario.
+ ❍ /gifid*:* Responde a un gif para decirte su ID de archivo.
 
-*Self added information:* 
- ❍ /setme <text>*:* will set your info
- ❍ /me*:* will get your or another user's info.
-*Examples:* 💡
- ➩ /setme I am a wolf.
- ➩ /me @username(defaults to yours if no user specified)
+*Información autoañadida:* 
+ ❍ /setme <texto>*:* Establecerá su información.
+ ❍ /me*:* obtendrá su información o la de otro usuario.
+*Ejemploss:* 💡
+ ➩ /setme Soy un lobo.
+ ➩ /me @username(Por defecto es tuyo si no se especifica ningún usuario.)
 
-*Information others add on you:* 
- ❍ /bio*:* will get your or another user's bio. This cannot be set by yourself.
- ❍ /setbio <text>*:* while replying, will save another user's bio 
-*Examples:* 💡
- ➩ /bio @username(defaults to yours if not specified).`
- ➩ /setbio This user is a wolf` (reply to the user)
+*Información que otros agregan sobre ti:* 
+ ❍ /bio*:* Obtendrá su biografía o la de otro usuario. Esto no puede ser configurado por usted mismo.
+ ❍ /setbio <texto>*:* Al responder, guardará la biografía de otro usuario.
+*Ejemplos:* 💡
+ ➩ /bio @username(el valor predeterminado es el suyo si no se especifica).`
+ ➩ /setbio Este usuario es un lobo` (Responde al usuario).
 
-*Overall Information about you:*
- ❍ /info*:* get information about a user. 
- ❍ /myinfo*:* Shows info about the user who sent this command.
+*Información general sobre usted:*
+ ❍ /info*:* obten información sobre un usuario. 
+ ❍ /myinfo*:* Muestra información sobre el usuario que envió este comando.
 """
 
 SET_BIO_HANDLER = DisableAbleCommandHandler("setbio", set_about_bio)
