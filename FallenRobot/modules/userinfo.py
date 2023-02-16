@@ -190,7 +190,7 @@ async def group_info(event) -> None:
     msg += "\n\n**ᴇsᴛᴀᴅɪsᴛɪᴄᴀs ᴅᴇ ᴍɪᴇᴍʙʀᴏs:**"
     msg += f"\nᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀᴇs: `{len(totallist)}`"
     msg += f"\nᴜsᴜᴀʀɪᴏs: `{totallist.total}`"
-    msg += "\n\n**ɪsᴛᴀ ᴅᴇ ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀᴇs:**"
+    msg += "\n\n**ʟɪsᴛᴀ ᴅᴇ ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀᴇs:**"
     for x in totallist:
         msg += f"\n• [{x.id}](tg://user?id={x.id})"
     msg += f"\n\n**ᴅᴇsᴄʀɪᴘᴄɪᴏɴ**:\n`{ch_full.full_chat.about}`"
@@ -270,7 +270,7 @@ def info(update: Update, context: CallbackContext):
                     text += _stext.format("ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀ")
     if user_id not in [bot.id, 777000, 1087968824]:
         userhp = hpmanager(user)
-        text += f"\n\n<b>ʜᴇᴀʟᴛʜ:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]"
+        text += f"\n\n<b>sᴀʟᴜᴅ:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]"
 
     if user.id == OWNER_ID:
         text += "\n\nᴇʟ ɴɪᴠᴇʟ ᴅᴇ ᴅᴇsᴀsᴛʀᴇ ᴅᴇ ᴇsᴛᴇ ᴜsᴜᴀʀɪᴏ ᴇs <b>ɢᴏᴅ</b>.\n"
