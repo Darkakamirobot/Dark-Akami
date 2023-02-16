@@ -30,16 +30,16 @@ async def github(_, message):
                 followers = result["followers"]
                 following = result["following"]
                 caption = f"""**Info Of {name}**
-**Username :** `{username}`
-**Bio :** `{bio}`
-**Profile Link :** [Here]({url})
-**Company :** `{company}`
-**Created On :** `{created_at}`
-**Repositories :** `{repositories}`
+**Nombre de usuario :** `{username}`
+**Biografia :** `{bio}`
+**Enlace de perfil :** [Here]({url})
+**Compañia :** `{company}`
+**Creado en :** `{created_at}`
+**Repositorios :** `{repositories}`
 **Blog :** `{blog}`
-**Location :** `{location}`
-**Followers :** `{followers}`
-**Following :** `{following}`"""
+**Localización :** `{location}`
+**Seguidores :** `{followers}`
+**Siguiendo :** `{following}`"""
             except:
                 print(str(e))
     await message.reply_photo(photo=avatar_url, caption=caption)
