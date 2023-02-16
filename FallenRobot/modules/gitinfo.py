@@ -9,7 +9,7 @@ from FallenRobot.utils.errors import capture_err
 @capture_err
 async def github(_, message):
     if len(message.command) != 2:
-        return await message.reply_text("/git nombre de usuario")
+        return await message.reply_text("/github nombre de usuario")
     username = message.text.split(None, 1)[1]
     URL = f"https://api.github.com/users/{username}"
     async with ClientSession() as session:
