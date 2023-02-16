@@ -192,7 +192,7 @@ def bluetext(update: Update, context: CallbackContext):
         msg.reply_to_message.reply_text if msg.reply_to_message else msg.reply_text
     )
     reply_text(
-        "/BLUE /TEXT\n/MUST /CLICK\n/I /AM /A /STUPID /ANIMAL /THAT /IS /ATTRACTED /TO /COLORS"
+        "/TEXTO /AZUL\n/HACER /CLICK\n/YO /SOY /UN /STUPIDO /ANIMAL /QUE /ESTÁ /ATRAIDO /POR /LOS /COLORES"
     )
 
 
