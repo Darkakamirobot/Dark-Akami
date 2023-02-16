@@ -45,10 +45,10 @@ def get_user_id(username):
                     return userdat.id
 
             except BadRequest as excp:
-                if excp.message == "Chat not found":
+                if excp.message == "Chat no encontrado":
                     pass
                 else:
-                    LOGGER.exception("Error extracting user ID")
+                    LOGGER.exception("Error al extraer el ID de usuario")
 
     return None
 
@@ -96,7 +96,7 @@ def broadcast(update: Update, context: CallbackContext):
                 except TelegramError:
                     failed_user += 1
         update.effective_message.reply_text(
-            f"Broadcast complete.\nGroups failed: {failed}.\nUsers failed: {failed_user}."
+            f"Broadcast completado.\nLos grupos fallaron: {failed}.\nLos usuarios fallaron: {failed_user}."
         )
 
 
@@ -123,7 +123,7 @@ def log_user(update: Update, context: CallbackContext):
 @sudo_plus
 def chats(update: Update, context: CallbackContext):
     all_chats = sql.get_all_chats() or []
-    chatfile = "List of chats.\n0. Chat name | Chat ID | Members count\n"
+    chatfile = "Lista de chats.\n0. Nombres de chats | Chat ID | Cantidad de miembros\n"
     P = 1
     for chat in all_chats:
         try:
@@ -142,7 +142,7 @@ def chats(update: Update, context: CallbackContext):
         update.effective_message.reply_document(
             document=output,
             filename="groups_list.txt",
-            caption="Here be the list of groups in my database.",
+            caption="Aquí está la lista de grupos en mi base de datos.",
         )
 
 
@@ -158,11 +158,11 @@ def chat_checker(update: Update, context: CallbackContext):
 
 def __user_info__(user_id):
     if user_id in [777000, 1087968824]:
-        return """<b>➻ ᴄᴏᴍᴍᴏɴ ᴄʜᴀᴛs:</b> <code>???</code>"""
+        return """<b>➻ ᴄʜᴀᴛs ᴇɴ ᴄᴏᴍᴜɴ:</b> <code>???</code>"""
     if user_id == dispatcher.bot.id:
-        return """<b>➻ ᴄᴏᴍᴍᴏɴ ᴄʜᴀᴛs:</b> <code>???</code>"""
+        return """<b>➻ ᴄʜᴀᴛs ᴇɴ ᴄᴏᴍᴜɴ:</b> <code>???</code>"""
     num_chats = sql.get_user_num_chats(user_id)
-    return f"""<b>➻ ᴄᴏᴍᴍᴏɴ ᴄʜᴀᴛs:</b> <code>{num_chats}</code>"""
+    return f"""<b>➻ ᴄʜᴀᴛs ᴇɴ ᴄᴏᴍᴜɴ:</b> <code>{num_chats}</code>"""
 
 
 def __stats__():
