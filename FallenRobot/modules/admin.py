@@ -163,7 +163,7 @@ def setchat_title(update: Update, context: CallbackContext):
     try:
         context.bot.set_chat_title(int(chat.id), str(title))
         msg.reply_text(
-            f"» sᴜᴄᴄᴇssғᴜʟʟʏ sᴇᴛ <b>{title}</b> ᴄᴏᴍᴏ ᴜɴ ɴᴜᴇᴠᴏ ᴛɪᴛᴜʟᴏ ᴅᴇ ᴄʜᴀᴛ !",
+            f"» ᴇsᴛᴀʙʟᴇᴄɪᴅᴏ ᴄᴏʀʀᴇᴄᴛᴀᴍᴇɴᴛᴇ <b>{title}</b> ᴄᴏᴍᴏ ᴜɴ ɴᴜᴇᴠᴏ ᴛɪᴛᴜʟᴏ ᴅᴇ ᴄʜᴀᴛ !",
             parse_mode=ParseMode.HTML,
         )
     except BadRequest as excp:
@@ -191,14 +191,14 @@ def promote(update: Update, context: CallbackContext) -> str:
         not (promoter.can_promote_members or promoter.status == "creator")
         and user.id not in DRAGONS
     ):
-        message.reply_text("» ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴩᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴀᴅᴅ ɴᴇᴡ ᴀᴅᴍɪɴs ʙᴀʙʏ !")
+        message.reply_text("» ɴᴏ ᴛɪᴇɴᴇs ᴘᴇʀᴍɪsᴏs ᴘᴀʀᴀ ᴀɢʀᴇɢᴀʀ ɴᴜᴇᴠᴏs ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀᴇs ʙᴇʙᴇ !")
         return
 
     user_id = extract_user(message, args)
 
     if not user_id:
         message.reply_text(
-            "» ɪ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴡʜᴏ's ᴛʜᴀᴛ ᴜsᴇʀ, ɴᴇᴠᴇʀ sᴇᴇɴ ʜɪᴍ ɪɴ ᴀɴʏ ᴏғ ᴛʜᴇ ᴄʜᴀᴛs ᴡʜᴇʀᴇ ɪ ᴀᴍ ᴩʀᴇsᴇɴᴛ !",
+            "» ɴᴏ sᴇ ǫᴜɪᴇɴ ᴇs ᴇsᴇ ᴜsᴜᴀʀɪᴏ, ɴᴜɴᴄᴀ ʟᴏ ᴠᴇᴏ ᴇɴ ɴɪɴɢᴜɴᴏ ᴅᴇ ʟᴏs ᴄʜᴀᴛs ᴅᴏɴᴅᴇ ᴇsᴛᴏʏ ᴘʀᴇsᴇɴᴛᴇ !",
         )
         return
 
@@ -208,12 +208,12 @@ def promote(update: Update, context: CallbackContext) -> str:
         return
 
     if user_member.status in ("administrator", "creator"):
-        message.reply_text("» ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ᴀʟʀᴇᴀᴅʏ ᴀɴ ᴀᴅᴍɪɴ ʜᴇʀᴇ !")
+        message.reply_text("» sᴇɢᴜɴ ʏᴏ ᴇsᴇ ᴜsᴜᴀʀɪᴏ ʏᴀ ᴇs ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀ ᴀǫᴜɪ !")
         return
 
     if user_id == bot.id:
         message.reply_text(
-            "» ɪ ᴄᴀɴ'ᴛ ᴩʀᴏᴍᴏᴛᴇ ᴍʏsᴇʟғ, ᴍʏ ᴏᴡɴᴇʀ ᴅɪᴅɴ'ᴛ ᴛᴏʟᴅ ᴍᴇ ᴛᴏ ᴅᴏ sᴏ."
+            "» ɴᴏ ᴘᴜᴇᴅᴏ ᴘʀᴏᴍᴏᴠᴇʀᴍᴇ, ᴍɪ ᴅᴜᴇñᴏ ɴᴏ ᴍᴇ ᴅɪJᴏ ǫᴜᴇ ʟᴏ ʜɪᴄɪᴇʀᴀ."
         )
         return
 
@@ -234,24 +234,24 @@ def promote(update: Update, context: CallbackContext) -> str:
         )
     except BadRequest as err:
         if err.message == "User_not_mutual_contact":
-            message.reply_text("» ᴀs ɪ ᴄᴀɴ sᴇᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ɴᴏᴛ ᴩʀᴇsᴇɴᴛ ʜᴇʀᴇ.")
+            message.reply_text("» ᴄᴏᴍᴏ ᴘᴜᴇᴅᴏ ᴠᴇʀ ǫᴜᴇ ᴇʟ ᴜsᴜᴀʀɪᴏ ɴᴏ ᴇsᴛᴀ ᴘʀᴇsᴇɴᴛᴇ ᴀǫᴜɪ.")
         else:
             message.reply_text(
-                "» sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ, ᴍᴀʏʙᴇ sᴏᴍᴇᴏɴᴇ ᴩʀᴏᴍᴏᴛᴇᴅ ᴛʜᴀᴛ ᴜsᴇʀ ʙᴇғᴏʀᴇ ᴍᴇ."
+                "» ᴀʟɢᴏ sᴀʟɪᴏ ᴍᴀʟ, ᴛᴀʟ ᴠᴇᴢ ᴀʟɢᴜɪᴇɴ ᴘʀᴏᴍᴏᴠɪᴏ ᴀ ᴇsᴇ ᴜsᴜᴀʀɪᴏ ᴀɴᴛᴇs ǫᴜᴇ ʏᴏ."
             )
         return
 
     bot.sendMessage(
         chat.id,
-        f"<b>» ᴩʀᴏᴍᴏᴛɪɴɢ ᴀ ᴜsᴇʀ ɪɴ</b> {chat.title}\n\nᴩʀᴏᴍᴏᴛᴇᴅ : {mention_html(user_member.user.id, user_member.user.first_name)}\nᴩʀᴏᴍᴏᴛᴇʀ : {mention_html(user.id, user.first_name)}",
+        f"<b>» ᴘʀᴏᴍᴏᴠɪᴇɴᴅᴏ ᴀ ᴜɴ ᴜsᴜᴀʀɪᴏ ᴇɴ</b> {chat.title}\n\nᴘʀᴏᴍᴏᴠɪᴅᴏ : {mention_html(user_member.user.id, user_member.user.first_name)}\nᴩʀᴏᴍᴏᴛᴇʀ : {mention_html(user.id, user.first_name)}",
         parse_mode=ParseMode.HTML,
     )
 
     log_message = (
         f"<b>{html.escape(chat.title)}:</b>\n"
-        f"#ᴩʀᴏᴍᴏᴛᴇᴅ\n"
-        f"<b>ᴩʀᴏᴍᴏᴛᴇʀ :</b> {mention_html(user.id, user.first_name)}\n"
-        f"<b>ᴜsᴇʀ :</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
+        f"#ᴘʀᴏᴍᴏᴠɪᴅᴏ\n"
+        f"<b>ᴘʀᴏᴍᴏᴛᴏʀ :</b> {mention_html(user.id, user.first_name)}\n"
+        f"<b>ᴜsᴜᴀʀɪᴏ :</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
     )
 
     return log_message
@@ -274,17 +274,17 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
     promoter = chat.get_member(user.id)
 
     if (
-        not (promoter.can_promote_members or promoter.status == "creator")
+        not (promoter.can_promote_members or promoter.status == "creador")
         and user.id not in DRAGONS
     ):
-        message.reply_text("» ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴩᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴀᴅᴅ ɴᴇᴡ ᴀᴅᴍɪɴs ʙᴀʙʏ !")
+        message.reply_text("» ɴᴏ ᴛɪᴇɴᴇs ᴘᴇʀᴍɪsᴏs ᴘᴀʀᴀ ᴀɢʀᴇɢᴀʀ ɴᴜᴇᴠᴏs ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀᴇs ʙᴇʙᴇ !")
         return
 
     user_id = extract_user(message, args)
 
     if not user_id:
         message.reply_text(
-            "» ɪ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴡʜᴏ's ᴛʜᴀᴛ ᴜsᴇʀ, ɴᴇᴠᴇʀ sᴇᴇɴ ʜɪᴍ ɪɴ ᴀɴʏ ᴏғ ᴛʜᴇ ᴄʜᴀᴛs ᴡʜᴇʀᴇ ɪ ᴀᴍ ᴩʀᴇsᴇɴᴛ !",
+            "» ɴᴏ sᴇ ǫᴜɪᴇɴ ᴇs ᴇsᴇ ᴜsᴜᴀʀɪᴏ, ɴᴜɴᴄᴀ ʟᴏ ᴠᴇᴏ ᴇɴ ɴɪɴɢᴜɴᴏ ᴅᴇ ʟᴏs ᴄʜᴀᴛs ᴅᴏɴᴅᴇ ᴇsᴛᴏʏ ᴘʀᴇsᴇɴᴛᴇ !",
         )
         return
 
@@ -293,13 +293,13 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
     except:
         return
 
-    if user_member.status in ("administrator", "creator"):
-        message.reply_text("» ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ᴀʟʀᴇᴀᴅʏ ᴀɴ ᴀᴅᴍɪɴ ʜᴇʀᴇ !")
+    if user_member.status in ("administrador", "creador"):
+        message.reply_text("» sᴇɢᴜɴ ʏᴏ ᴇsᴇ ᴜsᴜᴀʀɪᴏ ʏᴀ ᴇs ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀ ᴀǫᴜɪ !")
         return
 
     if user_id == bot.id:
         message.reply_text(
-            "» ɪ ᴄᴀɴ'ᴛ ᴩʀᴏᴍᴏᴛᴇ ᴍʏsᴇʟғ, ᴍʏ ᴏᴡɴᴇʀ ᴅɪᴅɴ'ᴛ ᴛᴏʟᴅ ᴍᴇ ᴛᴏ ᴅᴏ sᴏ."
+            "» ɴᴏ ᴘᴜᴇᴅᴏ ᴘʀᴏᴍᴏᴠᴇʀᴍᴇ, ᴍɪ ᴅᴜᴇñᴏ ɴᴏ ᴍᴇ ᴅɪJᴏ ǫᴜᴇ ʟᴏ ʜɪᴄɪᴇʀᴀ."
         )
         return
 
@@ -316,24 +316,24 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
         )
     except BadRequest as err:
         if err.message == "User_not_mutual_contact":
-            message.reply_text("» ᴀs ɪ ᴄᴀɴ sᴇᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ɴᴏᴛ ᴩʀᴇsᴇɴᴛ ʜᴇʀᴇ.")
+            message.reply_text("» ᴄᴏᴍᴏ ᴘᴜᴇᴅᴏ ᴠᴇʀ ǫᴜᴇ ᴇʟ ᴜsᴜᴀʀɪᴏ ɴᴏ ᴇsᴛᴀ ᴘʀᴇsᴇɴᴛᴇ ᴀǫᴜɪ.")
         else:
             message.reply_text(
-                "» sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ, ᴍᴀʏʙᴇ sᴏᴍᴇᴏɴᴇ ᴩʀᴏᴍᴏᴛᴇᴅ ᴛʜᴀᴛ ᴜsᴇʀ ʙᴇғᴏʀᴇ ᴍᴇ."
+                "» ᴀʟɢᴏ sᴀʟɪᴏ ᴍᴀʟ, ᴛᴀʟ ᴠᴇᴢ ᴀʟɢᴜɪᴇɴ ᴘʀᴏᴍᴏᴠɪᴏ ᴀ ᴇsᴇ ᴜsᴜᴀʀɪᴏ ᴀɴᴛᴇs ǫᴜᴇ ʏᴏ."
             )
         return
 
     bot.sendMessage(
         chat.id,
-        f"<b>» ʟᴏᴡ ᴩʀᴏᴍᴏᴛɪɴɢ ᴀ ᴜsᴇʀ ɪɴ </b>{chat.title}\n\n<b>ᴩʀᴏᴍᴏᴛᴇᴅ :</b> {mention_html(user_member.user.id, user_member.user.first_name)}\nᴩʀᴏᴍᴏᴛᴇʀ : {mention_html(user.id, user.first_name)}",
+        f"<b>» ʙᴀJᴀ ᴘʀᴏᴍᴏᴄɪᴏɴ ᴅᴇ ᴜɴ ᴜsᴜᴀʀɪᴏ ᴇɴ </b>{chat.title}\n\n<b>ᴘʀᴏᴍᴏᴠɪᴅᴏ :</b> {mention_html(user_member.user.id, user_member.user.first_name)}\nᴘʀᴏᴍᴏᴛᴏʀ : {mention_html(user.id, user.first_name)}",
         parse_mode=ParseMode.HTML,
     )
 
     log_message = (
         f"<b>{html.escape(chat.title)}:</b>\n"
-        f"#ʟᴏᴡᴩʀᴏᴍᴏᴛᴇᴅ\n"
-        f"<b>ᴩʀᴏᴍᴏᴛᴇʀ :</b> {mention_html(user.id, user.first_name)}\n"
-        f"<b>ᴜsᴇʀ :</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
+        f"#ʙᴀJᴀ ᴘʀᴏᴍᴏᴄɪᴏɴ\n"
+        f"<b>ᴘʀᴏᴍᴏᴛᴏʀ :</b> {mention_html(user.id, user.first_name)}\n"
+        f"<b>ᴜsᴜᴀʀɪᴏ :</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
     )
 
     return log_message
@@ -359,14 +359,14 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
         not (promoter.can_promote_members or promoter.status == "creator")
         and user.id not in DRAGONS
     ):
-        message.reply_text("» ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴩᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴀᴅᴅ ɴᴇᴡ ᴀᴅᴍɪɴs ʙᴀʙʏ !")
+        message.reply_text("» ɴᴏ ᴛɪᴇɴᴇs ᴘᴇʀᴍɪsᴏs ᴘᴀʀᴀ ᴀɢʀᴇɢᴀʀ ɴᴜᴇᴠᴏs ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀᴇs ʙᴇʙᴇ !")
         return
 
     user_id = extract_user(message, args)
 
     if not user_id:
         message.reply_text(
-            "» ɪ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴡʜᴏ's ᴛʜᴀᴛ ᴜsᴇʀ, ɴᴇᴠᴇʀ sᴇᴇɴ ʜɪᴍ ɪɴ ᴀɴʏ ᴏғ ᴛʜᴇ ᴄʜᴀᴛs ᴡʜᴇʀᴇ ɪ ᴀᴍ ᴩʀᴇsᴇɴᴛ !",
+            "» ɴᴏ sᴇ ǫᴜɪᴇɴ ᴇs ᴇsᴇ ᴜsᴜᴀʀɪᴏ, ɴᴜɴᴄᴀ ʟᴏ ᴠᴇᴏ ᴇɴ ɴɪɴɢᴜɴᴏ ᴅᴇ ʟᴏs ᴄʜᴀᴛs ᴅᴏɴᴅᴇ ᴇsᴛᴏʏ ᴘʀᴇsᴇɴᴛᴇ !",
         )
         return
 
@@ -376,12 +376,12 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
         return
 
     if user_member.status in ("administrator", "creator"):
-        message.reply_text("» ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ᴀʟʀᴇᴀᴅʏ ᴀɴ ᴀᴅᴍɪɴ ʜᴇʀᴇ !")
+        message.reply_text("» sᴇɢᴜɴ ʏᴏ ᴇsᴇ ᴜsᴜᴀʀɪᴏ ʏᴀ ᴇs ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀ ᴀǫᴜɪ !")
         return
 
     if user_id == bot.id:
         message.reply_text(
-            "» ɪ ᴄᴀɴ'ᴛ ᴩʀᴏᴍᴏᴛᴇ ᴍʏsᴇʟғ, ᴍʏ ᴏᴡɴᴇʀ ᴅɪᴅɴ'ᴛ ᴛᴏʟᴅ ᴍᴇ ᴛᴏ ᴅᴏ sᴏ."
+            "» ɴᴏ ᴘᴜᴇᴅᴏ ᴘʀᴏᴍᴏᴠᴇʀᴍᴇ, ᴍɪ ᴅᴜᴇñᴏ ɴᴏ ᴍᴇ ᴅɪJᴏ ǫᴜᴇ ʟᴏ ʜɪᴄɪᴇʀᴀ."
         )
         return
 
@@ -404,10 +404,10 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
         )
     except BadRequest as err:
         if err.message == "User_not_mutual_contact":
-            message.reply_text("» ᴀs ɪ ᴄᴀɴ sᴇᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ɴᴏᴛ ᴩʀᴇsᴇɴᴛ ʜᴇʀᴇ.")
+            message.reply_text("» ᴄᴏᴍᴏ ᴘᴜᴇᴅᴏ ᴠᴇʀ ǫᴜᴇ ᴇʟ ᴜsᴜᴀʀɪᴏ ɴᴏ ᴇsᴛᴀ ᴘʀᴇsᴇɴᴛᴇ ᴀǫᴜɪ.")
         else:
             message.reply_text(
-                "» sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ, ᴍᴀʏʙᴇ sᴏᴍᴇᴏɴᴇ ᴩʀᴏᴍᴏᴛᴇᴅ ᴛʜᴀᴛ ᴜsᴇʀ ʙᴇғᴏʀᴇ ᴍᴇ."
+                "» ᴀʟɢᴏ sᴀʟɪᴏ ᴍᴀʟ, ᴛᴀʟ ᴠᴇᴢ ᴀʟɢᴜɪᴇɴ ᴘʀᴏᴍᴏᴠɪᴏ ᴀ ᴇsᴇ ᴜsᴜᴀʀɪᴏ ᴀɴᴛᴇs ǫᴜᴇ ʏᴏ."
             )
         return
 
