@@ -331,7 +331,7 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
 
     log_message = (
         f"<b>{html.escape(chat.title)}:</b>\n"
-        f"#ʙᴀJᴀ ᴘʀᴏᴍᴏᴄɪᴏɴ\n"
+        f"#ʟᴏᴡᴩʀᴏᴍᴏᴛᴇᴅ\n"
         f"<b>ᴘʀᴏᴍᴏᴛᴏʀ :</b> {mention_html(user.id, user.first_name)}\n"
         f"<b>ᴜsᴜᴀʀɪᴏ :</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
     )
@@ -424,15 +424,15 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
 
     bot.sendMessage(
         chat.id,
-        f"» ғᴜʟʟᴩʀᴏᴍᴏᴛɪɴɢ ᴀ ᴜsᴇʀ ɪɴ <b>{chat.title}</b>\n\n<b>ᴜsᴇʀ : {mention_html(user_member.user.id, user_member.user.first_name)}</b>\n<b>ᴩʀᴏᴍᴏᴛᴇʀ : {mention_html(user.id, user.first_name)}</b>",
+        f"» ᴘʀᴏᴍᴏᴄɪᴏɴ ᴄᴏᴍᴘʟᴇᴛᴀ ᴅᴇ ᴜɴ ᴜsᴜᴀʀɪᴏ ᴇɴ <b>{chat.title}</b>\n\n<b>ᴜsᴜᴀʀɪᴏ : {mention_html(user_member.user.id, user_member.user.first_name)}</b>\n<b>ᴩʀᴏᴍᴏᴛᴇʀ : {mention_html(user.id, user.first_name)}</b>",
         parse_mode=ParseMode.HTML,
     )
 
     log_message = (
         f"<b>{html.escape(chat.title)}:</b>\n"
         f"#ғᴜʟʟᴩʀᴏᴍᴏᴛᴇᴅ\n"
-        f"<b>ᴩʀᴏᴍᴏᴛᴇʀ :</b> {mention_html(user.id, user.first_name)}\n"
-        f"<b>ᴜsᴇʀ :</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
+        f"<b>ᴘʀᴏᴍᴏᴛᴏʀ :</b> {mention_html(user.id, user.first_name)}\n"
+        f"<b>ᴜsᴜᴀʀɪᴏ :</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
     )
 
     return log_message
@@ -455,7 +455,7 @@ def demote(update: Update, context: CallbackContext) -> str:
     user_id = extract_user(message, args)
     if not user_id:
         message.reply_text(
-            "» ɪ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴡʜᴏ's ᴛʜᴀᴛ ᴜsᴇʀ, ɴᴇᴠᴇʀ sᴇᴇɴ ʜɪᴍ ɪɴ ᴀɴʏ ᴏғ ᴛʜᴇ ᴄʜᴀᴛs ᴡʜᴇʀᴇ ɪ ᴀᴍ ᴩʀᴇsᴇɴᴛ !",
+            "» ɴᴏ sᴇ ǫᴜɪᴇɴ ᴇs ᴇsᴇ ᴜsᴜᴀʀɪᴏ, ɴᴜɴᴄᴀ ʟᴏ ᴠᴇᴏ ᴇɴ ɴɪɴɢᴜɴᴏ ᴅᴇ ʟᴏs ᴄʜᴀᴛs ᴅᴏɴᴅᴇ ᴇsᴛᴏʏ ᴘʀᴇsᴇɴᴛᴇ !",
         )
         return
 
@@ -464,18 +464,18 @@ def demote(update: Update, context: CallbackContext) -> str:
     except:
         return
 
-    if user_member.status == "creator":
+    if user_member.status == "creador":
         message.reply_text(
-            "» ᴛʜᴀᴛ ᴜsᴇʀ ɪs ᴏᴡɴᴇʀ ᴏғ ᴛʜᴇ ᴄʜᴀᴛ ᴀɴᴅ ɪ ᴅᴏɴ'ᴛ ᴡᴀɴᴛ ᴛᴏ ᴩᴜᴛ ᴍʏsᴇʟғ ɪɴ ᴅᴀɴɢᴇʀ."
+            "» ᴇsᴇ ᴜsᴜᴀʀɪᴏ ᴇs ᴇʟ ᴅᴜᴇñᴏ ᴅᴇʟ ᴄʜᴀᴛ ʏ ɴᴏ ǫᴜɪᴇʀᴏ ᴘᴏɴᴇʀᴍᴇ ᴇɴ ᴘᴇʟɪɢʀᴏ."
         )
         return
 
-    if not user_member.status == "administrator":
-        message.reply_text("» ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ʜᴇʀᴇ !")
+    if not user_member.status == "administrador":
+        message.reply_text("» sᴇɢᴜɴ ʏᴏ ᴇsᴇ ᴜsᴜᴀʀɪᴏ ʏᴀ ɴᴏ ᴇs ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀ ᴀǫᴜɪ !")
         return
 
     if user_id == bot.id:
-        message.reply_text("» ɪ ᴄᴀɴ'ᴛ ᴅᴇᴍᴏᴛᴇ ᴍʏsᴇʟғ, ʙᴜᴛ ɪғ ʏᴏᴜ ᴡᴀɴᴛ ɪ ᴄᴀɴ ʟᴇᴀᴠᴇ.")
+        message.reply_text("» Nᴏ ᴘᴜᴇᴅᴏ ᴅᴇɢʀᴀᴅᴀʀᴍᴇ, ᴘᴇʀᴏ sɪ ǫᴜɪᴇʀᴇs ᴘᴜᴇᴅᴏ ɪʀᴍᴇ.")
         return
 
     try:
@@ -495,22 +495,22 @@ def demote(update: Update, context: CallbackContext) -> str:
 
         bot.sendMessage(
             chat.id,
-            f"» sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇᴍᴏᴛᴇᴅ ᴀ ᴀᴅᴍɪɴ ɪɴ <b>{chat.title}</b>\n\nᴅᴇᴍᴏᴛᴇᴅ : <b>{mention_html(user_member.user.id, user_member.user.first_name)}</b>\nᴅᴇᴍᴏᴛᴇʀ : {mention_html(user.id, user.first_name)}",
+            f"» ᴅᴇɢʀᴀᴅᴏ ᴄᴏɴ ᴇxɪᴛᴏ ᴀ ᴜɴ ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀ ᴇɴ <b>{chat.title}</b>\n\nᴅᴇɢʀᴀᴅᴏ : <b>{mention_html(user_member.user.id, user_member.user.first_name)}</b>\nᴅᴇᴍᴏᴛᴇʀ : {mention_html(user.id, user.first_name)}",
             parse_mode=ParseMode.HTML,
         )
 
         log_message = (
             f"<b>{html.escape(chat.title)}:</b>\n"
             f"#ᴅᴇᴍᴏᴛᴇᴅ\n"
-            f"<b>ᴅᴇᴍᴏᴛᴇʀ :</b> {mention_html(user.id, user.first_name)}\n"
-            f"<b>ᴅᴇᴍᴏᴛᴇᴅ :</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
+            f"<b>ᴅᴇɢʀᴀᴅᴀᴅᴏʀ :</b> {mention_html(user.id, user.first_name)}\n"
+            f"<b>ᴅᴇɢʀᴀᴅᴏ :</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
         )
 
         return log_message
     except BadRequest:
         message.reply_text(
-            "» ғᴀɪʟᴇᴅ ᴛᴏ ᴅᴇᴍᴏᴛᴇ ᴍᴀʏʙᴇ ɪ'ᴍ ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ᴏʀ ᴍᴀʏʙᴇ sᴏᴍᴇᴏɴᴇ ᴇʟsᴇ ᴩʀᴏᴍᴏᴛᴇᴅ ᴛʜᴀᴛ"
-            " ᴜsᴇʀ !",
+            "» ɴᴏ ᴘᴜᴅᴏ sᴇʀ ᴅᴇɢʀᴀᴅᴀᴅᴏ, ᴛᴀʟ ᴠᴇᴢ ɴᴏ sᴏʏ ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀ ᴏ ᴛᴀʟ ᴠᴇᴢ ᴀʟɢᴜɪᴇɴ ᴍás ᴘʀᴏᴍᴏᴠɪᴏ ᴀ ᴇsᴇ"
+            " ᴜsᴜᴀʀɪᴏ !",
         )
         return
 
@@ -523,7 +523,7 @@ def refresh_admin(update, _):
     except KeyError:
         pass
 
-    update.effective_message.reply_text("» sᴜᴄᴄᴇssғᴜʟʟʏ ʀᴇғʀᴇsʜᴇᴅ ᴀᴅᴍɪɴ ᴄᴀᴄʜᴇ !")
+    update.effective_message.reply_text("» ᴄᴀᴄʜᴇ ᴅᴇ ᴀᴅᴍɪɴɪsᴛʀᴀᴄɪᴏɴ ᴀᴄᴛᴜᴀʟɪᴢᴀᴅᴀ ᴄᴏɴ ᴇxɪᴛᴏ !")
 
 
 @run_async
