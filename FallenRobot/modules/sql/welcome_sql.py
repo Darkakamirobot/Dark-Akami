@@ -7,21 +7,21 @@ from sqlalchemy import BigInteger, Boolean, Column, Integer, String, UnicodeText
 from FallenRobot.modules.helper_funcs.msg_types import Types
 from FallenRobot.modules.sql import BASE, SESSION
 
-DEFAULT_WELCOME = "Hey {first}, how are you?"
-DEFAULT_GOODBYE = "Nice knowing ya!"
+DEFAULT_WELCOME = "oye {first} kun como estas?"
+DEFAULT_GOODBYE = "adios, fue divertido!"
 
 DEFAULT_WELCOME_MESSAGES = [
-    "{first} is here!",
-    "Ready player {first}",
-    "Genos, {first} is here.",
-    "A wild {first} appeared.",
+    "{first} estas aqui!",
+    "listo para comenzar {first}",
+    "Un macakarp, {first} atrapenlo xd.",
+    "Se unió. {first} alegensen del chat.",
     "{first} came in like a Lion!",
     "{first} has joined your party.",
-    "Arre dekho dekho koun aaya\n{first} aaya {first} aaya",
-    "{first} just joined. Can I get a heal?",
-    "{first} just joined the chat - asdgfhak!",
-    "{first} just joined. Everyone, look busy!",
-    "Welcome, {first}. Stay awhile and listen.",
+    "One-chan.{first} ooneee-chan {first} volviste awww",
+    "{first} te unistes en el momento que se terminó todo puedes irte",
+    "{first} acaba de unirse al chst!",
+    "{first} se unió . todos , parezcan ocupados!",
+    "Ven, {first}. ne-nechan*lo toma de la mano* te estábamos esperando.",
     "Welcome, {first}. We were expecting you ( ͡° ͜ʖ ͡°)",
     "Welcome, {first}. We hope you brought pizza.",
     "Welcome, {first}. Leave your weapons by the door.",
