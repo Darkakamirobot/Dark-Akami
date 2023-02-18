@@ -546,50 +546,50 @@ def set_title(update: Update, context: CallbackContext):
 
     if not user_id:
         message.reply_text(
-            "» ɪ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴡʜᴏ's ᴛʜᴀᴛ ᴜsᴇʀ, ɴᴇᴠᴇʀ sᴇᴇɴ ʜɪᴍ ɪɴ ᴀɴʏ ᴏғ ᴛʜᴇ ᴄʜᴀᴛs ᴡʜᴇʀᴇ ɪ ᴀᴍ ᴩʀᴇsᴇɴᴛ !",
+            "»  ɴᴏ sᴇ ǫᴜɪᴇɴ ᴇs ᴇsᴇ ᴜsᴜᴀʀɪᴏ, ɴᴜɴᴄᴀ ʟᴏ ᴠᴇᴏ ᴇɴ ɴɪɴɢᴜɴᴏ ᴅᴇ ʟᴏs ᴄʜᴀᴛs ᴅᴏɴᴅᴇ ᴇsᴛᴏʏ ᴘʀᴇsᴇɴᴛᴇ !",
         )
         return
 
-    if user_member.status == "creator":
+    if user_member.status == "creador":
         message.reply_text(
-            "» ᴛʜᴀᴛ ᴜsᴇʀ ɪs ᴏᴡɴᴇʀ ᴏғ ᴛʜᴇ ᴄʜᴀᴛ ᴀɴᴅ ɪ ᴅᴏɴ'ᴛ ᴡᴀɴᴛ ᴛᴏ ᴩᴜᴛ ᴍʏsᴇʟғ ɪɴ ᴅᴀɴɢᴇʀ.",
+            "» ᴇsᴇ ᴜsᴜᴀʀɪᴏ ᴇs ᴇʟ ᴅᴜᴇñᴏ ᴅᴇʟ ᴄʜᴀᴛ ʏ ɴᴏ ǫᴜɪᴇʀᴏ ᴘᴏɴᴇʀᴍᴇ ᴇɴ ᴘᴇʟɪɢʀᴏ.",
         )
         return
 
-    if user_member.status != "administrator":
+    if user_member.status != "administrador":
         message.reply_text(
-            "» ɪ ᴄᴀɴ ᴏɴʟʏ sᴇᴛ ᴛɪᴛʟᴇ ғᴏʀ ᴀᴅᴍɪɴs !",
+            "» sᴏʟᴏ ᴘᴜᴇᴅᴏ ᴇsᴛᴀʙʟᴇᴄᴇʀ ᴜɴ ᴛɪᴛᴜʟᴏ ᴘᴀʀᴀ ʟᴏs ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀᴇs !",
         )
         return
 
     if user_id == bot.id:
         message.reply_text(
-            "» ɪ ᴄᴀɴ'ᴛ sᴇᴛ ᴛɪᴛʟᴇ ғᴏʀ ᴍʏsᴇʟғ, ᴍʏ ᴏᴡɴᴇʀ ᴅɪᴅɴ'ᴛ ᴛᴏʟᴅ ᴍᴇ ᴛᴏ ᴅᴏ sᴏ.",
+            "» Nᴏ ᴘᴜᴇᴅᴏ ᴇsᴛᴀʙʟᴇᴄᴇʀ ᴇʟ ᴛíᴛᴜʟᴏ ᴘᴀʀᴀ ᴍí, ᴍɪ ᴅᴜᴇñᴏ ɴᴏ ᴍᴇ ᴅɪJᴏ ǫᴜᴇ ʟᴏ ʜɪᴄɪᴇʀᴀ.",
         )
         return
 
     if not title:
         message.reply_text(
-            "» ʏᴏᴜ ᴛʜɪɴᴋ ᴛʜᴀᴛ sᴇᴛᴛɪɴɢ ʙʟᴀɴᴋ ᴛɪᴛʟᴇ ᴡɪʟʟ ᴄʜᴀɴɢᴇ sᴏᴍᴇᴛʜɪɴɢ ?"
+            "» ¿ᴄʀᴇᴇs ǫᴜᴇ ᴅᴇJᴀʀ ᴇʟ ᴛɪᴛᴜʟᴏ ᴇɴ ʙʟᴀɴᴄᴏ ᴄᴀᴍʙɪᴀʀᴀ ᴀʟɢᴏ ?"
         )
         return
 
     if len(title) > 16:
         message.reply_text(
-            "» ᴛʜᴇ ᴛɪᴛʟᴇ ʟᴇɴɢᴛʜ ɪs ʟᴏɴɢᴇʀ ᴛʜᴀɴ 16 ᴡᴏʀᴅs ᴏʀ ᴄʜᴀʀᴀᴄᴛᴇʀs sᴏ ᴛʀᴜɴᴄᴀᴛɪɴɢ ɪᴛ ᴛᴏ 16 ᴡᴏʀᴅs.",
+            "» ʟᴀ ʟᴏɴɢɪᴛᴜᴅ ᴅᴇʟ ᴛɪᴛᴜʟᴏ ᴛɪᴇɴᴇ ᴍᴀs ᴅᴇ 𝟷𝟼 ᴘᴀʟᴀʙʀᴀs ᴏ ᴄᴀʀᴀᴄᴛᴇʀᴇs, ᴘᴏʀ ʟᴏ ǫᴜᴇ sᴇ ᴅᴇʙᴇ ᴛʀᴜɴᴄᴀʀ ᴀ 𝟷𝟼 ᴘᴀʟᴀʙʀᴀs.",
         )
 
     try:
         bot.setChatAdministratorCustomTitle(chat.id, user_id, title)
     except BadRequest:
         message.reply_text(
-            "» ᴍᴀʏʙᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ɴᴏᴛ ᴩʀᴏᴍᴏᴛᴇᴅ ʙʏ ᴍᴇ ᴏʀ ᴍᴀʏʙᴇ ʏᴏᴜ sᴇɴᴛ sᴏᴍᴇᴛʜɪɴɢ ᴛʜᴀᴛ ᴄᴀɴ'ᴛ ʙᴇ sᴇᴛ ᴀs ᴛɪᴛʟᴇ."
+            "» ᴛᴀʟ ᴠᴇᴢ ᴇsᴇ ᴜsᴜᴀʀɪᴏ ɴᴏ ғᴜᴇ ᴘʀᴏᴍᴏᴠɪᴅᴏ ᴘᴏʀ ᴍɪ ᴏ ᴛᴀʟ ᴠᴇᴢ ᴇɴᴠɪᴀsᴛᴇ ᴀʟɢᴏ ǫᴜᴇ ɴᴏ sᴇ ᴘᴜᴇᴅᴇ ᴇsᴛᴀʙʟᴇᴄᴇʀ ᴄᴏᴍᴏ ᴛɪᴛᴜʟᴏ."
         )
         return
 
     bot.sendMessage(
         chat.id,
-        f"» sᴜᴄᴄᴇssғᴜʟʟʏ sᴇᴛ ᴛɪᴛʟᴇ ғᴏʀ <code>{user_member.user.first_name or user_id}</code> "
+        f"» ᴇsᴛᴀʙʟᴇᴄɪᴅᴏ ᴄᴏʀʀᴇᴄᴛᴀᴍᴇɴᴛᴇ ᴇʟ ᴛɪᴛᴜʟᴏ ᴘᴀʀᴀ <code>{user_member.user.first_name or user_id}</code> "
         f"ᴛᴏ <code>{html.escape(title[:16])}</code>!",
         parse_mode=ParseMode.HTML,
     )
@@ -620,7 +620,7 @@ def pin(update: Update, context: CallbackContext) -> str:
     prev_message = update.effective_message.reply_to_message
 
     if prev_message is None:
-        msg.reply_text("» ʀᴇᴩʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ᴩɪɴ ɪᴛ !")
+        msg.reply_text("» ʀᴇsᴘᴏɴᴅᴇ ᴀ ᴜɴ ᴍᴇɴsᴀJᴇ ᴘᴀʀᴀ ғɪJᴀʀʟᴏ !")
         return
 
     is_silent = True
@@ -637,7 +637,7 @@ def pin(update: Update, context: CallbackContext) -> str:
                 chat.id, prev_message.message_id, disable_notification=is_silent
             )
             msg.reply_text(
-                f"» sᴜᴄᴄᴇssғᴜʟʟʏ ᴩɪɴɴᴇᴅ ᴛʜᴀᴛ ᴍᴇssᴀɢᴇ.\nᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ sᴇᴇ ᴛʜᴇ ᴍᴇssᴀɢᴇ.",
+                f"» ғɪJᴏ ᴄᴏɴ ᴇxɪᴛᴏ ᴇsᴇ ᴍᴇɴsᴀJᴇ.\nʜᴀɢᴀ ᴄʟɪᴄ ᴇɴ ᴇʟ ʙᴏᴛᴏɴ ᴅᴇ ᴀʙᴀJᴏ ᴘᴀʀᴀ ᴠᴇʀ ᴇʟ ᴍᴇɴsᴀJᴇ.",
                 reply_markup=InlineKeyboardMarkup(
                     [[InlineKeyboardButton("ᴍᴇssᴀɢᴇ", url=f"{message_link}")]]
                 ),
@@ -650,8 +650,8 @@ def pin(update: Update, context: CallbackContext) -> str:
 
         log_message = (
             f"<b>{html.escape(chat.title)}:</b>\n"
-            f"ᴩɪɴɴᴇᴅ-ᴀ-ᴍᴇssᴀɢᴇ\n"
-            f"<b>ᴩɪɴɴᴇᴅ ʙʏ :</b> {mention_html(user.id, html.escape(user.first_name))}"
+            f"ᴀɴᴄʟᴏ ᴜɴ ᴍᴇɴsᴀJᴇ\n"
+            f"<b>ᴀɴᴄʟᴀᴅᴏ ᴘᴏʀ :</b> {mention_html(user.id, html.escape(user.first_name))}"
         )
 
         return log_message
@@ -674,7 +674,7 @@ def unpin(update: Update, context: CallbackContext):
         and user.id not in DRAGONS
     ):
         message.reply_text(
-            "» ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴩᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴩɪɴ/ᴜɴᴩɪɴ ᴍᴇssᴀɢᴇs ɪɴ ᴛʜɪs ᴄʜᴀᴛ !"
+            "»  ɴᴏ ᴛɪᴇɴᴇs ᴘᴇʀᴍɪsᴏs ᴘᴀʀᴀ ᴩɪɴ/ᴜɴᴩɪɴ ᴍᴇɴsᴀJᴇs ᴇɴ ᴇsᴛᴇ ᴄʜᴀᴛ !"
         )
         return
 
@@ -694,7 +694,7 @@ def unpin(update: Update, context: CallbackContext):
         try:
             context.bot.unpinChatMessage(chat.id, prev_message.message_id)
             msg.reply_text(
-                f"» sᴜᴄᴄᴇssғᴜʟʟʏ ᴜɴᴩɪɴɴᴇᴅ <a href='{message_link}'> ᴛʜɪs ᴩɪɴɴᴇᴅ ᴍᴇssᴀɢᴇ</a>.",
+                f"» ᴅᴇsᴀɴᴄʟᴀᴅᴏ ᴄᴏɴ ᴇxɪᴛᴏ <a href='{message_link}'> ᴇsᴛᴇ ᴍᴇɴsᴀJᴇ ᴀɴᴄʟᴀᴅᴏ</a>.",
                 parse_mode=ParseMode.HTML,
                 disable_web_page_preview=True,
             )
@@ -705,19 +705,19 @@ def unpin(update: Update, context: CallbackContext):
     if not prev_message and is_group:
         try:
             context.bot.unpinChatMessage(chat.id)
-            msg.reply_text("» sᴜᴄᴄᴇssғᴜʟʟʏ ᴜɴᴩɪɴɴᴇᴅ ᴛʜᴇ ʟᴀsᴛ ᴩɪɴɴᴇᴅ ᴍᴇssᴀɢᴇ.")
+            msg.reply_text("» ᴅᴇsᴀɴᴄʟᴏ ᴄᴏɴ ᴇxɪᴛᴏ ᴇʟ ᴜʟᴛɪᴍᴏ ᴍᴇɴsᴀJᴇ ᴀɴᴄʟᴀᴅᴏ.")
         except BadRequest as excp:
-            if excp.message == "Message to unpin not found":
+            if excp.message == "Mensaje para desanclar no encontrado":
                 msg.reply_text(
-                    "» ɪ ᴄᴀɴ'ᴛ ᴜɴᴩɪɴ ᴛʜᴀᴛ ᴍᴇssᴀɢᴇ, ᴍᴀʏʙᴇ ᴛʜᴀᴛ ᴍᴇssᴀɢᴇ ɪs ᴛᴏᴏ ᴏʟᴅ ᴏʀ ᴍᴀʏʙᴇ sᴏᴍᴇᴏɴᴇ ᴀʟʀᴇᴀᴅʏ ᴜɴᴩɪɴɴᴇᴅ ɪᴛ."
+                    "» ɴᴏ ᴘᴜᴇᴅᴏ ᴅᴇsᴀɴᴄʟᴀʀ ᴇʟ ᴍᴇɴsᴀJᴇ, ᴛᴀʟ ᴠᴇᴢ ᴇsᴇ ᴍᴇɴsᴀJᴇ ᴇs ᴅᴇᴍᴀsɪᴀᴅᴏ ᴀɴᴛɪɢᴜᴏ ᴏ ᴛᴀʟ ᴠᴇᴢ ᴀʟɢᴜɪᴇɴ ʏᴀ ʟᴏ ᴅᴇsᴀɴᴄʟᴏ."
                 )
             else:
                 raise
 
     log_message = (
         f"<b>{html.escape(chat.title)}:</b>\n"
-        f"ᴜɴᴩɪɴɴᴇᴅ-ᴀ-ᴍᴇssᴀɢᴇ\n"
-        f"<b>ᴜɴᴩɪɴɴᴇᴅ ʙʏ :</b> {mention_html(user.id, html.escape(user.first_name))}"
+        f"ᴅᴇsᴀɴᴄʟᴏ ᴜɴ ᴍᴇɴsᴀJ\n"
+        f"<b>ᴅᴇsᴀɴᴄʟᴀᴅᴏ ᴘᴏʀ :</b> {mention_html(user.id, html.escape(user.first_name))}"
     )
 
     return log_message
@@ -745,7 +745,7 @@ def pinned(update: Update, context: CallbackContext) -> str:
             message_link = f"https://t.me/c/{link_chat_id}/{pinned_id}"
 
         msg.reply_text(
-            f"ᴩɪɴɴᴇᴅ ᴏɴ {html.escape(chat.title)}.",
+            f"ᴀɴᴄʟᴀᴅᴏ ᴇɴ {html.escape(chat.title)}.",
             reply_to_message_id=msg_id,
             parse_mode=ParseMode.HTML,
             disable_web_page_preview=True,
@@ -753,7 +753,7 @@ def pinned(update: Update, context: CallbackContext) -> str:
                 [
                     [
                         InlineKeyboardButton(
-                            text="ᴍᴇssᴀɢᴇ",
+                            text="ᴍᴇɴsᴀJᴇ",
                             url=f"https://t.me/{link_chat_id}/{pinned_id}",
                         )
                     ]
@@ -763,7 +763,7 @@ def pinned(update: Update, context: CallbackContext) -> str:
 
     else:
         msg.reply_text(
-            f"» ᴛʜᴇʀᴇ's ɴᴏ ᴩɪɴɴᴇᴅ ᴍᴇssᴀɢᴇ ɪɴ <b>{html.escape(chat.title)}!</b>",
+            f"» ɴᴏ ʜᴀʏ ɴɪɴɢᴜɴ ᴍᴇɴsᴀJᴇ ᴀɴᴄʟᴀᴅᴏ ᴇɴ <b>{html.escape(chat.title)}!</b>",
             parse_mode=ParseMode.HTML,
         )
 
@@ -785,11 +785,11 @@ def invite(update: Update, context: CallbackContext):
             update.effective_message.reply_text(invitelink)
         else:
             update.effective_message.reply_text(
-                "» ɪ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴩᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴀᴄᴄᴇss ɪɴᴠɪᴛᴇ ʟɪɴᴋs !",
+                "» ɴᴏ ᴛᴇɴɢᴏ ᴘᴇʀᴍɪsᴏs ᴘᴀʀᴀ ᴀᴄᴄᴇᴅᴇʀ ᴀ ʟᴏs ᴇɴʟᴀᴄᴇs ᴅᴇ ɪɴᴠɪᴛᴀᴄɪᴏɴ !",
             )
     else:
         update.effective_message.reply_text(
-            "» ɪ ᴄᴀɴ ᴏɴʟʏ ɢɪᴠᴇ ɪɴᴠɪᴛᴇ ʟɪɴᴋs ғᴏʀ ɢʀᴏᴜᴩs ᴀɴᴅ ᴄʜᴀɴɴᴇʟs !",
+            "» sᴏʟᴏ ᴘᴜᴇᴅᴏ ᴅᴀʀ ᴇɴʟᴀᴄᴇs ᴅᴇ ɪɴᴠɪᴛᴀᴄɪᴏɴ ᴘᴀʀᴀ ɢʀᴜᴘᴏs ʏ ᴄᴀɴᴀʟᴇs !",
         )
 
 
@@ -804,7 +804,7 @@ def adminlist(update, context):
     if update.effective_message.chat.type == "private":
         send_message(
             update.effective_message,
-            "» ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴄᴀɴ ᴏɴʟʏ ʙᴇ ᴜsᴇᴅ ɪɴ ɢʀᴏᴜᴩ's ɴᴏᴛ ɪɴ ᴩᴍ.",
+            "» ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ sᴏʟᴏ sᴇ ᴘᴜᴇᴅᴇ ᴜsᴀʀ ᴇɴ ɢʀᴜᴘᴏs ɴᴏ ᴇɴ ᴘʀɪᴠᴀᴅᴏ.",
         )
         return
 
@@ -814,18 +814,18 @@ def adminlist(update, context):
 
     try:
         msg = update.effective_message.reply_text(
-            "» ғᴇᴛᴄʜɪɴɢ ᴀᴅᴍɪɴs ʟɪsᴛ...",
+            "» ᴏʙᴛᴇɴɪᴇɴᴅᴏ ʟᴀ ʟɪsᴛᴀ ᴅᴇ ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀᴇs...",
             parse_mode=ParseMode.HTML,
         )
     except BadRequest:
         msg = update.effective_message.reply_text(
-            "» ғᴇᴛᴄʜɪɴɢ ᴀᴅᴍɪɴs ʟɪsᴛ...",
+            "» ᴏʙᴛᴇɴɪᴇɴᴅᴏ ʟᴀ ʟɪsᴛᴀ ᴅᴇ ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀᴇs...",
             quote=False,
             parse_mode=ParseMode.HTML,
         )
 
     administrators = bot.getChatAdministrators(chat_id)
-    text = "ᴀᴅᴍɪɴs ɪɴ <b>{}</b>:".format(html.escape(update.effective_chat.title))
+    text = "ᴀᴅᴍɪɴɪᴛʀᴀᴅᴏʀᴇs ᴇɴ <b>{}</b>:".format(html.escape(update.effective_chat.title))
 
     for admin in administrators:
         user = admin.user
@@ -833,7 +833,7 @@ def adminlist(update, context):
         custom_title = admin.custom_title
 
         if user.first_name == "":
-            name = "☠ ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛ"
+            name = "☠ ᴄᴜᴇɴᴛᴀ ᴇʟɪᴍɪɴᴀᴅᴀ"
         else:
             name = "{}".format(
                 mention_html(
@@ -848,7 +848,7 @@ def adminlist(update, context):
 
         # if user.username:
         #    name = escape_markdown("@" + user.username)
-        if status == "creator":
+        if status == "creador":
             text += "\n 🥀 ᴏᴡɴᴇʀ :"
             text += "\n<code> • </code>{}\n".format(name)
 
@@ -866,7 +866,7 @@ def adminlist(update, context):
         custom_title = admin.custom_title
 
         if user.first_name == "":
-            name = "☠ ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛ"
+            name = "☠ ᴄᴜᴇɴᴛᴀ ᴇʟɪᴍɪɴᴀᴅᴀ"
         else:
             name = "{}".format(
                 mention_html(
@@ -876,7 +876,7 @@ def adminlist(update, context):
             )
         # if user.username:
         #    name = escape_markdown("@" + user.username)
-        if status == "administrator":
+        if status == "administrador":
             if custom_title:
                 try:
                     custom_admin_list[custom_title].append(name)
@@ -958,13 +958,13 @@ def button(update: Update, context: CallbackContext) -> str:
             query.answer("ᴅᴇᴍᴏᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ !")
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
-                f"#DEMOTE\n"
-                f"<b>ᴅᴇᴍᴏᴛᴇʀ :</b> {mention_html(user.id, user.first_name)}\n"
-                f"<b>ᴜsᴇʀ :</b> {mention_html(member.user.id, member.user.first_name)}"
+                f"#DEGRADAR\n"
+                f"<b>ᴅᴇɢʀᴀᴅᴀᴅᴏʀ :</b> {mention_html(user.id, user.first_name)}\n"
+                f"<b>ᴜsᴜᴀʀɪᴏ :</b> {mention_html(member.user.id, member.user.first_name)}"
             )
     else:
         update.effective_message.edit_text(
-            "» ғᴀɪʟᴇᴅ ᴛᴏ ᴅᴇᴍᴏᴛᴇ, ᴍᴀʏʙᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ᴏʀ ᴍᴀʏʙᴇ ʟᴇғᴛ ᴛʜᴇ ɢʀᴏᴜᴩ !"
+            "» ɴᴏ sᴇ ᴘᴜᴅᴏ ᴅᴇɢʀᴀᴅᴀʀ, ᴛᴀʟ ᴠᴇᴢ ᴇsᴇ ᴜsᴜᴀʀɪᴏ ɴᴏ ᴇs ᴜɴ ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀ ᴏ ᴛᴀʟ ᴠᴇᴢ ᴀʙᴀɴᴅᴏɴᴏ ᴇʟ ɢʀᴜᴘᴏ !"
         )
         return ""
 
