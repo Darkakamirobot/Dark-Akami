@@ -13,7 +13,7 @@ DEFAULT_GOODBYE = "adios, fue divertido!"
 DEFAULT_WELCOME_MESSAGES = [
     "{first} estas aqui!",
     "listo para comenzar {first}",
-    "Un macakarp, {first} atrapenlo xd.",
+    "Un mackarp, {first} atrapenlo xd.",
     "Se unió. {first} alegensen del chat.",
     "{first} came in like a Lion!",
     "{first} has joined your party.",
