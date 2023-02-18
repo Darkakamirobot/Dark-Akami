@@ -15,7 +15,7 @@ DEFAULT_WELCOME_MESSAGES = [
     "listo para comenzar {first}",
     "Un mackarp, {first} atrapenlo xd.",
     "Se unió. {first} alegensen del chat.",
-    "{first} came in like a Lion!",
+    "{first} se unió el rey y ruge como un león grrr!",
     "{first} has joined your party.",
     "One-chan.{first} ooneee-chan {first} volviste awww",
     "{first} te unistes en el momento que se terminó todo puedes irte",
